@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya:400,700,700i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext');
+/* font-family: 'Alegreya', serif; */
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya+SC:400,700,700i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext');
+/* font-family: 'Alegreya SC', serif; */
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext');
+/* font-family: 'Source Sans Pro', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css?family=Kalam:400,700&subset=latin-ext');
+/* font-family: 'Kalam', cursive; */
+	
+	
+body {
+		background-color: #FDF1DC; 
+		color: #503b30; 
+		font-family: 'Source Sans Pro', sans-serif; 
+		margin: 0; 
+		padding: 0px;  
+		background:url('images/paperbg2.jpg');
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+section[id], h2[id], h3[id] {
+    scroll-margin-top: 25px;
+}
+
+
+
+
+i {
+	color: #900b0b; 
+}
+		
+.main-layout { 
+		display: grid; 
+		grid-template-columns: 320px 1fr; 
+		gap: 40px; 
+		max-width: 1500px; 
+		margin: 0 auto; 
+}
+        
+
+		h1 {
+  font-family: 'Alegreya SC', serif;
+  font-weight: 700;
+  font-size: 42px;
+    margin: 0; 
+  padding: 0px; 
+}
+
+h2 {
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  color: #900b0b;   
+  font-size: 32px;
+    margin: 0; 
+  padding: 0px; 
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #a08264;
+  text-transform: uppercase;
+}
+ 
+h3 {
+  font-family: 'Alegreya SC', serif;
+  font-weight: 700;
+  font-size: 26px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin: 0; 
+  padding: 0px; 
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #a08264;
+}
+   
+
+h4 {
+  font-family: 'Alegreya SC', serif;
+  font-weight: 700; 
+    margin: 0; 
+  padding: 0px; 
+  font-size: 22px;
+}
+
+h5 {
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  color: #900b0b; 
+  font-size: 18px;
+    margin: 0; 
+  padding: 0px; 
+  text-transform: uppercase;
+}
+		
+		
+		
+		.quote p { 
+		margin: 0;  
+		font-size: 0.95rem; 
+		color: #503b30; 
+		font-family: 'Kalam', cursive;
+		}
+		
+		
+		
+		.spoiler {
+  border: 0px solid;
+  border-radius: 10px;
+  background: #323c46;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #e8e8e1;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.spoiler:hover {
+  background: #8c0a0a;
+}
+
+.spoiler:active, .spoiler-button:focus, .spoiler-button:target {
+  background: #323c46;
+}
+
+.spoiler-container .well {
+  box-shadow: none;
+}
+
+.spoiler-content {
+  background: #f0f0e6;
+  color: #3c2828;
+  border-radius: 10px;
+  border: 0px solid;
+  
+}
+		
+		
+		
+        /* === Left Sidebar: Sticky World Codex Menu === */
+ .sidebar { 
+		position: sticky; 
+		top: 30px;  
+		padding: 25px; 
+		border-radius: 8px; 
+		box-shadow: 0 4px 15px rgba(0,0,0,0.5); 
+		height: fit-content; 
+}
+		
+.sidebar h2 {  /* === world codex title === */
+		color: #8b1c1c; 
+		font-size: 1.4rem; 
+		border-bottom: 2px solid #4a2e22; 
+		padding-bottom: 8px; margin-top: 0; 
+		text-transform: uppercase; 
+		letter-spacing: 1px; 
+		font-family: 'Alegreya', serif;
+}
+		
+.menu-group {  /* === Title text for each section ie. The Players/World Concepts etc === */
+		margin-top: 20px; 
+		font-weight: bold; 
+		color: #900b0b; 
+		text-transform: uppercase; 
+		font-size: 1.2rem; 
+		font-family: 'Alegreya SC', serif;
+}
+        
+        /* Dropdown & Nesting Logic */
+.nav-list { 
+		list-style: none; 
+		padding: 0; 
+		margin: 5px 0 0 0; 
+}
+		
+ .nav-item { 
+		position: relative; 
+		margin-bottom: 8px; 
+}
+		
+.nav-item > a {  /* === Codex Links === */
+		display: block; 
+		color: #503b31;
+		text-decoration: none; 
+		padding: 6px 10px; 
+		background-color: rgba(61, 37, 27, 0.10); 
+		border-radius: 4px; 
+font-weight: bold;
+		text-transform: none; 
+}
+		
+.nav-item > a:hover {  /* === Codex Links Hover Over=== */
+		background-color: rgba(61, 37, 27, 0.25); 
+  color: #1c1410;
+    font-weight: bold;
+	box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+	border-radius: 8px; 
+}
+        
+        /* Hidden sub-menus that slide open only on hover */
+ .nested-dropdown { 
+		display: none; 
+		list-style: none; 
+		padding-left: 15px; 
+		margin-top: 5px; 
+}
+		
+ .nested-dropdown li a { 
+		display: block; color: #ff0000; 
+		text-decoration: none; 
+		padding: 4px 8px; 
+		font-size: 0.9rem; 
+		font-weight: normal; 
+		text-transform: none; 
+		border-left: 2px solid #8b1c1c; 
+}
+		
+ .nested-dropdown li a:hover { 
+		color: #ffaa44; 
+		background-color: #2b1a13; 
+}
+ .nav-item:hover .nested-dropdown { 
+		display: block; 
+} /* Displays sub-pages smoothly without bloat */
+
+
+
+
+        /* === Right Sidebar: Main Profile Content Flow === */
+ .content-flow { 
+		display: flex; 
+		flex-direction: column; 
+		gap: 30px; 
+}
+		
+.section-box {  
+		padding: 30px; 
+		border-radius: 8px; 
+		box-shadow: 0 4px 15px rgba(0,0,0,0.5); 
+}
+		
+.section-box h1 { 
+		margin-top: 0; 
+		color: #900b0b;  
+		font-family: 'Alegreya SC', serif;
+}
+		
+.section-box p { 
+		font-size: 16px;
+		color: #503b30; 
+		font-family: 'Source Sans Pro', sans-serif; 
+}
+
+.section-box li {  
+		margin-left: 25px; 
+		color: #900b0b; 
+		    margin-bottom: 2px !important; /* Tweaking this number lets you control the exact spacing */
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+
+
+
+
+ .section-box a {
+		 color: #900b0b; 
+		 text-decoration: none;  
+		 text-transform: none;  
+		 border-bottom: 1px dashed #3d251b;
+}
+		 
+.section-box a:hover { 
+		 color: #ff0000; 
+		 text-decoration: none;  
+		 text-transform: none;  
+		 border-bottom: 1px dashed #900b0b;
+
+ }
+
+        
+/* 🚨 2. The Universal Safety Shield & Age Notification */
+ .world-disclaimer {  
+		padding: 30px; 
+		border-radius: 8px; 
+		box-shadow: 0 4px 15px rgba(144,11,11,0.8); 
+}
+		
+.world-disclaimer h1 {
+		font-family: 'Alegreya SC', serif;
+		  margin: 0; 
+  padding: 0px; 
+}
+		
+.world-disclaimer h2 {  
+		color: #900b0b;   
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 32px;
+  padding-top: 5px;
+  margin: 2; 
+  padding: 2px; 
+  border-bottom-style: solid;
+  border-bottom-color: #a08264;
+  text-transform: uppercase;
+}
+		
+.world-disclaimer p { 
+		color: #503b30;   
+		margin-bottom: 15px;  
+		font-family: 'Source Sans Pro', sans-serif; 
+}
+		
+.world-disclaimer ul { 
+		margin: 0; 
+		padding-left: 20px; 
+}
+		
+.world-disclaimer li { 
+		display: block; 
+		color: #000000; 
+		border-left: 4px solid #8b1c1c;  
+		padding: 5px 5px; 
+		padding-left: .15rem;
+		margin: 5px 5px; 
+		background: rgba(94, 55, 29, .07);
+}
+		
+ .world-disclaimer a {
+		 color: #ff0000; 
+		 text-decoration: none;  
+		 text-transform: none;  
+		 border-bottom: 1px dashed #3d251b;
+}
+		 
+.world-disclaimer a:hover { 
+		 color: #2b1a13; 
+		 background-color: rgba(61, 37, 27, 0.15); 
+ }
+		 
+		 
+        /* 👥 3. Personal Player Messages */
+ .player-messages { 
+		display: flex; flex-direction: column; 
+		gap: 15px; 
+}
+		
+.msg-card { 
+		background-color: #ffffff; 
+		border-left: 4px solid #ffaa44; 
+		padding: 15px 20px; 
+		border-radius: 0 6px 6px 0; 
+}
+ .msg-card strong { 
+		color: #900b0b; 
+		display: block; 
+		margin-bottom: 5px; 
+}
+		
+.msg-card p { 
+		margin: 0;  
+		font-size: 0.95rem; 
+		color: #503b30; 
+		font-family: 'Kalam', cursive;
+}
+		
+.full-width-banner {
+    width: 100%;
+    height: 280px;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+
+/* Optional banner positioning adjustments ie: class="full-width-banner banner-world" */
+
+.banner-top {
+    object-position: center top;
+}
+
+.banner-upper {
+    object-position: center 25%;
+}
+
+.banner-lower {
+    object-position: center 75%;
+}
+
+.banner-bottom {
+    object-position: center bottom;
+}
+
+/* Specific positioning for the homepage */
+.banner-world {
+    object-position: center 10%;
+}
+
+
+
+
+
+
+
+
+
+/* ====================================================================
+   MAIN CODEX DIRECTORY STYLES (LIGHT PARCHMENT EXTENSION)
+   ==================================================================== */
+
+/* 1. Multi-Column Responsive Grid Structure */
+.codex-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 15px;
+    padding: 10px;
+    background-color: transparent;
+}
+
+/* 2. Individual Party Panel Containers */
+.party-group-card {
+   background-color: rgba(61, 37, 27, 0.10) !important;/* Your exact sidebar transparent backdrop tint! */
+    border: 1px solid #dac5a1;                  /* Elegant layout parchment framing trim */
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: inset 0 2px 4px rgba(61, 37, 27, 0.1), 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 3. Party Header Banners */
+.party-header-banner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #b0914f; /* Muted gold trim separator */
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+}
+
+.party-header-banner h3 {
+    color: #900b0b; /* Your exact World Anvil crimson header red */
+     font-family: 'Alegreya', serif;
+    margin: 0;
+    font-size: 1.25rem;
+	border-bottom-width: 0px;
+}
+
+.party-header-banner i {
+    font-size: 1.25rem;
+}
+
+/* 4. Mini Group Descriptions */
+.party-lore-blurb {
+    font-family: 'Source Sans Pro', sans-serif; 
+    color: #503b31;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+}
+
+/* 5. Character Listing Links Flow */
+.codex-character-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Trailing Tag Safe Row Spacing for your compact links directory */
+.codex-character-list li {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px dashed rgba(80, 59, 49, 0.15);
+}
+
+.codex-character-list li:last-child {
+    border-bottom: none;
+}
+
+.codex-character-list li i {
+    font-size: 1rem;
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* 6. Character Interactive Link Hover States */
+.codex-character-list a {
+    color: #503b31;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out;
+}
+
+.codex-character-list a:hover {
+    color: #900b0b; /* Turns to your rich crimson on hover */
+}
+
+/* 7. Subtle Meta Information Text Blocks (Species, Classes, Status) */
+.codex-meta-trait {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: rgba(80, 59, 49, 0.85); /* Slightly darker brown text for pristine contrast */
+    font-style: italic;
+}
+
+
+/* =========================================
+   OPTIONAL HOVER TOOLTIPS
+   ========================================= */
+
+.lore-tooltip {
+    position: relative;
+    cursor: help;
+    text-decoration: underline dotted;
+    text-underline-offset: 3px;
+}
+
+/* Tooltip box */
+.lore-tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: max-content;
+    max-width: min(350px, 80vw);
+    box-sizing: border-box;
+    padding: 9px 12px;
+
+    background: #242424;
+    color: #eeeeee;
+    border: 1px solid #777777;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+    font-size: 13px;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1.5;
+    text-align: left;
+    white-space: pre-line;         /* Use &#10;  to create a linebreak in text. two &#10; sequences create a blank line between the title and description */
+    overflow-wrap: break-word;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 9999;
+
+    transition: opacity 0.15s ease;
+}
+
+/* Show only on hover or keyboard focus */
+.lore-tooltip:hover::after,
+.lore-tooltip:focus-visible::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
