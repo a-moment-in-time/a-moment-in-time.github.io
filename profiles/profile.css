@@ -1,0 +1,215 @@
+   body { background-color: #1c110c; color: #f4eae1; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 30px; }
+   		 a {color: #dfb28a; text-decoration: none;  font-size: 0.9rem; font-weight: normal; text-transform: none; }
+         a:hover { color: #ffaa44; background-color: #2b1a13; }
+        .main-layout { display: grid; grid-template-columns: 320px 1fr; gap: 40px; max-width: 1300px; margin: 0 auto; }
+        
+        /* === Left Sidebar: Sticky World Codex Menu === */
+        .sidebar { position: sticky; top: 30px; background-color: #2b1a13; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); height: fit-content; }
+        .sidebar h2 { color: #8b1c1c; font-size: 1.4rem; border-bottom: 2px solid #4a2e22; padding-bottom: 8px; margin-top: 0; text-transform: uppercase; letter-spacing: 1px; }
+        .menu-group { margin-top: 20px; font-weight: bold; color: #dfb28a; text-transform: uppercase; font-size: 0.95rem; }
+        
+        /* Dropdown & Nesting Logic (The World Anvil Bloat Fix!) */
+        .nav-list { list-style: none; padding: 0; margin: 5px 0 0 0; }
+        .nav-item { position: relative; margin-bottom: 8px; }
+        .nav-item > a { display: block; color: #ffaa44; text-decoration: none; padding: 6px 10px; background-color: #3d251b; border-radius: 4px; font-weight: normal; text-transform: none; }
+        .nav-item > a:hover { background-color: #4a2e22; color: #ffb894; }
+        
+        /* Hidden sub-menus that slide open only on hover */
+        .nested-dropdown { display: none; list-style: none; padding-left: 15px; margin-top: 5px; }
+        .nested-dropdown li a { display: block; color: #dfb28a; text-decoration: none; padding: 4px 8px; font-size: 0.9rem; font-weight: normal; text-transform: none; border-left: 2px solid #8b1c1c; }
+        .nested-dropdown li a:hover { color: #ffaa44; background-color: #2b1a13; }
+        .nav-item:hover .nested-dropdown { display: block; } /* Displays sub-pages smoothly without bloat */
+
+        /* === Right Sidebar: Main Profile Content Flow === */
+        .content-flow { display: flex; flex-direction: column; gap: 30px; }
+        .section-box { background-color: #2b1a13; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .section-box h1 { margin-top: 0; color: #ffb894; }
+        .section-box p { font-size: 1.05rem; line-height: 1.6; color: #dfb28a; }
+        
+        /* 🚨 2. The Universal Safety Shield & Age Notification */
+        .world-disclaimer { background-color: #3a1111; border: 2px solid #b32424; border-radius: 6px; padding: 25px; }
+        .world-disclaimer h2 { margin-top: 0; color: #ff6b6b; font-size: 1.3rem; letter-spacing: 1px; }
+        .world-disclaimer p { color: #ffb3b3;   margin-bottom: 15px; }
+        .world-disclaimer ul { margin: 0; padding-left: 20px; }
+        .world-disclaimer li { margin-bottom: 8px; color: #f4eae1; font-size: 0.95rem; }
+
+        /* 👥 3. Personal Player Messages */
+        .player-messages { display: flex; flex-direction: column; gap: 15px; }
+        .msg-card { background-color: #3d251b; border-left: 4px solid #ffaa44; padding: 15px 20px; border-radius: 0 6px 6px 0; }
+        .msg-card strong { color: #ffb894; display: block; margin-bottom: 5px; }
+        .msg-card p { margin: 0; font-style: italic; font-size: 0.95rem; color: #e5ddca; }
+		
+		.full-width-banner {
+  width: 100%;       /* Forces the image to match the container/browser width */
+  height: auto;      /* Keeps the image in its correct aspect ratio so it doesn't stretch */
+  display: block;    /* Removes a default tiny white gap at the bottom of the image */
+}
+
+
+
+
+
+
+
+
+
+/* Base Layout Grid split into Content and Sidebar */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px; 
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start; /* Crucial for sticky behavior: prevents column stretching */
+}
+
+/* Hide all functional radio buttons globally */
+input[type="radio"] {
+  display: none;
+}
+
+/* ===================================================
+   TOP TABS MECHANICS (MAIN CONTENT)
+   =================================================== */
+.main-content-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  .top-tab-btn {
+    padding: 12px 24px;
+    background: #2a2a2a;      /* Dark tab base */
+    color: #bfa15f;           /* Warm muted gold text */
+    cursor: pointer;
+    border: 1px solid #3a3a3a;
+    border-bottom: none;
+    margin-right: 5px;
+    font-weight: bold;
+    border-radius: 6px 6px 0 0;
+    transition: background 0.2s, color 0.2s;
+  }
+  
+  .top-tab-btn:hover {
+    background: #333333;
+    color: #ffd875;           /* Bright gold highlight on hover */
+  }
+
+  .top-tab-panel {
+    width: 100%;
+    order: 99; 
+    display: none;
+    padding: 25px;
+    border: 1px solid #3a3a3a;
+    background: #222222;      /* Panel interior background */
+    border-radius: 0 6px 6px 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    
+    h2, h3 {
+      color: #ffd875;         /* Golden headers */
+      margin-top: 0;
+    }
+  }
+
+  /* Logic: Show top panel when its corresponding radio is checked */
+  input[type="radio"]:checked {
+    + .top-tab-btn {
+      background: #222222;    /* Matches open panel background */
+      color: #ffd875;         /* Active golden text */
+      border-color: #3a3a3a;
+      border-bottom: 1px solid #222222;
+      margin-bottom: -1px; 
+      z-index: 2;
+    }
+    + .top-tab-btn + .top-tab-panel {
+      display: block;
+    }
+  }
+}
+
+/* ===================================================
+   SIDE TABS MECHANICS (STICKY SIDEBAR PANEL)
+   =================================================== */
+.sidebar-tabs {
+  background: #222222;
+  border: 1px solid #3a3a3a;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  
+  /* Ppins the box to the screen when scrolling down */
+  position: sticky;
+  top: 20px; 
+
+  .bio-image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #3a3a3a;
+  }
+
+  .sidebar-tab-system {
+    display: flex;
+    flex-wrap: wrap;
+
+    .side-tab-btn {
+      flex: 1; 
+      text-align: center;
+      padding: 10px;
+      background: #2a2a2a;
+      color: #bfa15f;
+      cursor: pointer;
+      border: 1px solid #3a3a3a;
+      font-size: 0.9rem;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    
+    .side-tab-btn:hover {
+      background: #333333;
+      color: #ffd875;
+    }
+
+    .side-tab-panel {
+      width: 100%;
+      order: 99; 
+      display: none;
+      padding: 15px 5px 0 5px;
+    }
+    
+    /* Logic: Show sidebar sub-panel when its radio is checked */
+    input[type="radio"]:checked {
+      + .side-tab-btn {
+        background: #222222;
+        color: #ffd875;
+        border-bottom: none;
+      }
+      + .side-tab-btn + .side-tab-panel {
+        display: block;
+      }
+    }
+  }
+}
+
+/* Info list styling inside sidebar */
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #3a3a3a;
+    font-size: 0.95rem;
+    display: flex;
+    justify-content: space-between;
+    
+    strong {
+      color: #bfa15f; /* Gold labels for stats */
+    }
+  }
+  
+  li:last-child {
+    border-bottom: none;
+  }
+}

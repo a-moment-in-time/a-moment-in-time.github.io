@@ -1,0 +1,188 @@
+[INSTRUCTIONS]
+==========================================================================
+⚠️ TRP PROFILE TEXT TEMPLATE - PLEASE READ BEFORE EDITING ⚠️
+==========================================================================
+1. DO NOT CHANGE, DELETE, OR EDIT ANY TEXT INSIDE CAPITAL BRACKETS.
+   (e.g., Leave [HISTORY], [APPEARANCE], and [GENDER] exactly as they are).
+   If you break or delete a bracket, your info will vanish from the website.
+
+2. ADD YOUR INFO ONLY ON THE LINES BELOW THE BRACKETS.
+   Type your descriptions naturally. 
+
+3. PARAGRAPHS: 
+   To start a new paragraph, hit ENTER TWICE to leave an empty line. 
+   Do not crowd your text into one massive block.
+
+4. FORMATTING CHEATSHEET:
+   * To make text BOLD:   <b>Your Text Here</b>
+   * To make text ITALIC: <i>Your Text Here</i>
+   * To link a character: <a href="?char=name" onclick="switchProfile(event, 'name')">Name</a>
+   * To make a new section header: <h2>Your Text Here</h2>
+   * Image: <img src="images/wowguidebook.png" style="display: block; max-width: 150px; margin: 15px auto; border: 1px solid #dac5a1; box-shadow: 0 4px 8px rgba(80, 59, 49, 0.15);">
+     <ul class="menu-group">
+  <li class="nav-item"><a href="?char=sandria" onclick="switchProfile(event, 'sandria')">Sandria</a></li>
+  <li class="nav-item"><a href="?char=ebben" onclick="switchProfile(event, 'ebben')">Ebben</a></li>
+</ul>
+==========================================================================
+
+
+
+[IMAGE]
+portrait/default.png
+
+[NAME] Jornaku
+
+[PRONOUNCED] Jorn-aku
+
+[ALIASES] Jornus Netherwave (Visage)
+
+[GENDER] Male
+ 
+[AGE] 13 (as of <a href="https://warcraft.wiki.gg/wiki/Timeline#Battle_for_Azeroth" target="new">BFA</a>, year 34) 
+19 (as of <a href="https://warcraft.wiki.gg/wiki/Timeline#Dragonflight" target="new">Dragonflight</a>, Year 40)
+<b>Human Equivalent</b> Mid 40's to early 50's. 
+
+[BIRTHPLACE] Shadowmoon - Outland
+
+[SEXUALITY] 
+
+[STATUS] Alive
+
+[SPECIES] Nether Dragon
+
+[GROWTH_STAGE] Dragon (Adult)
+
+[MORTAL_GUISE] Void Elf
+
+[HEIGHT] 6'3" (Void Elf)
+
+[BUILD] Slim
+
+[SCALE_COLOR] Cobalt
+
+[EYE] Silver
+
+[HAIR] Phthalo Blue fading to a Dark Violet at the tips.
+
+[SKIN_TONE]
+
+[FACTION] Alliance
+
+[OCCUPATION] Mage and Transportation
+
+[LANGUAGE]
+Common
+Draconic
+Orcish
+
+[AFFILIATION]
+(Indirectly) Netherwing Dragonflight
+(Former Member) Shattered Sun Offensive
+(Current) Argent Crusade
+
+
+[VOICE]
+
+
+
+
+[INFORMATION]
+Basic Information Here
+
+BC year 26. Jornus is 5 years old
+BFA year 34 Jornus is 13 years old
+DF Year 40 Jornus is 19 years old
+
+
+
+[HISTORY]
+Jornaku's egg was hatched in Shadowmoon Valley on the shattered world of Outland with in the cluches of the Dragonmaw clan. Hatched as a runt, and though his kind grew faster than that of normal dragons over time, the Orc's that were enslaving his kind didn't take kindly to his smaller and weaker status. Being around four feet at the shoulder while others around his age were just becoming big enough to start saddle training with a smaller rider. Instead of being rid of him however, they opted to keep him as a 'bait drake' to be used to train their other captive nether drakes against as Jornaku was less likely to put up much a fight or do much harm if he did to his stronger kin.
+
+It was during one of these 'training sessions' that Jornaku managed to fight back, ripping into the neck of his aggressive kin before he broke free and tried to break away to the skies. He managed to fly off, reaching near the edge of the clan's borders before he was knocked out of the air and roughly to the ground by one of his larger, armored, and more loyal kin and its Orc rider. The crash landing rendered him unconscious, allowing him to easily be bound and dragged back. They locked him in chains bolted to the ground, and as punishment the Orc's seared his eyes, blinding him to prevent him from trying to flee again, and make him more... compliant to their ongoing 'training sessions'.
+
+His world became that of darkness, yells, roars, and pain feeling teeth and claws further maim his flesh..
+<h2>A chance Encounter</h2>
+With in three years time the forces of Azeroth were beginning their crusade against the Burning Legion, flowing to Outland through the Dark Portal.
+
+Tailanna was one such, a Night Elf Hunter she was one of many that took up the charge in aiding the Netherwing Dragonflight by infiltrating the Dragonmaw clan to free those still of mind to be freed and take back any eggs. It was during one of these missions that she found Jornaku being torn into by a larger drake for it's training. While she couldn't do anything at that moment or risk blowing her cover, she would later come back during the mists of a group assault on the clan.
+
+She wasn't aware he was blind at first as she opened the pen he was laying in until she tried to urge him to fly and escape. When he didn't rush out and fly off, but instead stumbled from the pen, bumping his nose on the door it became clear why this drake was being treated differently than the rest. As much as she hated to, Tailanna found little choise but to grab a rope off a wall, tie a loop of it around the blind drakes neck and use it to guide him out.
+
+At first, Tai tried to bring the blind drake to his own, but in trying Jornaku suddenly became fearful. In his darkness he felt like he was being brought back to his tormenters and broke from the lead guiding him and bolted, but didn't make it far as he tumbled into a ditch in the ground. On top of that, on learning he was blind those of the Netherwing Dragonflight also did not have the means nor the desires to tend to their blind kin. This put the night elf in a small bind, the young drakes fears and disability wouldn't allow him to go back to his own kind, and she didn't want to turn him into a pet, dragons were not pets! Nor were they mindless beasts to be turned into mounts!
+
+Still she couldn't leave this one to an unknown fate. So until she could figure something out, she took him with her all the way back to Shattrath City and found a healer to mend his fresher wounds and check his eyes. The healer confirmed that the drake was truly fully blind, and had been for a time with no hope of ever having his vision restored. Tai then eventually brought him further to Telaar, a town in the southern reaches of Nagrand that Tailanna had a rented place in for her time in Outlands.
+<h2>New Opportunities</h2>
+It was in the weeks that passed that Jornaku's intelligence started to come to light as his fears faded and trust between him and Tai started to form. The drake could speak! His mind hadn't been broken like so many others, and despite being blind he was keenly aware of everything that had happened to him, and his apparent freedom from the torment he endured. The two started to form a tight friendship, and rather than just some hunters pet or mount, Jornaku, or Jornus as Tai started calling him as a fresh start to a new life became a friend and companion, and soon his meekness started to fade as his confidence grew, further aided when he finally took a mortal form.
+
+Though being blind, he didn't have much control over the full appearance of his newly made mortal form, taking the form of the only other race he had seen that wasn't an Orc... a blood elf... sort of. Though he had the form, the color he was as a cobalt nether drake was apparent on his skin and even his hair... he also took the form fully naked. Oops. Tailanna brought him some clothing and helped him with his unruly hair. They both settled on a simple tunic and long pants that also helped cover most of his scares outside the ones on his face, though they quickly opted out of any kind of footwear or gloves as Jornus navigated around better by touch.
+
+Taking a mortal form gave Jornus a newfound freedom, and Tailanna welcomed him as her partner as she went on adventures. He embraced his arcane nature as a mage and learned to read the world around him though vibrations and his other senses, further building up his confidence and helping him gain more independence as they both worked together through any issues he faced due to his blindness. (And being a mage that can portal around is a added bonus). Although appearing as an off colored Blood Elf (Void Elves didn't exist at the time) accompanied with a Night Elf did cause some heads to turn and some issues at times with Alliance guards. But Jornus wasn't shy in revealing what he really was.
+
+The biggest achievement for them both, was when Tailanna found a means to grant him the one thing he truly wished for.. the freedom of FLIGHT. All due to him bringing up how, with a cool breeze blowing on his face, he could imagen he was flying, something he was sad he couldn't do due to his blindness… but Tai was just the type to go ‘Okay lets do it then’.
+
+It took many crashes, scrapes, falls, bruises, but over the years and some creative ‘training’ and the trust between them Jornus learned to fly freely with confidence while his friend guides him on his back, even to the point where no words need to be spoken. He would never be able to truly fly on his own, but he didn't mind.
+
+<h2>Ongoing Concepts</h2>
+A future concept for Jornus suggested by one of our group would have been that he'd approach the Blue Dragonflight after learning that Tyrygosa was studding and had taken charge of a wayward brood of Nether Dragons in the Netherstorm of Outland (told <a href="https://wowpedia.fandom.com/wiki/Securing_the_Celestial_Ridge">in game</a> and the Shadow Wing comics) in hopes of finding a means to stabilize his form.
+
+While such a means would not be found he would end up working along side another of the Blue Flight who would help develop an artifact to act as a sort of battery that he could synthon energy from to artificially extend his life beyond what it would normally support.
+
+But at the cost that the demands of his body due to being unstable would start increasing, and as more time passed begin to effect his mind like a cross between an addiction and alzheimer's until he reached a stage that his life could no longer be supported and he'd burn out just shy of 200 years.
+
+[PERSONALITY]
+
+
+[ABILITIES]
+<h2>Education/Training</h2>
+	  
+<h2>Abilities</h2>
+*   <b>Draconic Attunement:</b> Once per day, adds a <i>+2 bonus</i> to draconic magic casting.
+*   <b>Aura of Protection:</b> Grants a permanent passive shield to nearby party members.
+	  
+<h2>Trade Skills</h2>
+		
+<h2>Hobbies</h2>
+
+
+[RELATIONS]
+
+[NOTES]<h2>(TO CLEAR UP UNDERAGE NONSENSE)</h2>DRAGONS ARE NOT REAL LIFE HUMANS, They are a FICIONAL SPECIES and do not age or mature at the same rate as we do in real life.
+
+<b><a href="https://warcraft.wiki.gg/wiki/Nether_dragon">Read the wiki</a>:</b>
+<i>"Nether dragons are highly unstable. As a result, they <b>age rapidly</b> but soon burn themselves out as their energies fade, giving them <b>considerably shorter lifespans</b> than other dragons."</i>
+
+Nether Dragons came into existence at the end of the Second War when the Orc Shaman Ner'zhul recklessly opened multiple portals on Draenor, and the magical stress tore the planet apart. This exposed a stash of Black Dragon Eggs Deathwing had hidden away on the world to the energies of the twisting nether, warping them into Nether Dragons.
+
+Nether Dragons have only existed for around 25 years as of the Fourth War (BFA).
+
+As of the <a href="https://warcraft.wiki.gg/wiki/Timeline">Warcraft Timeline</a>:
+
+<li>The <a href="https://warcraft.wiki.gg/wiki/Second_War#Aftermath">Aftermath of the Second War</a>, <b>year 8</b>, (Year 601 by the King's Calendar) is when Nether Dragons came into existence.
+<li>By Warcraft III; Year 20; tells the events of the Third War, Nether Dragons have existed for only 12 Years yet we already see ADULT NETHER DRAGONS.
+<li>Burning Crusade was year 26, a full 18 years for Nether Dragons to exist, in these 18 years we not only in game see ADULT Nether Dragons , but their ADULT CHILDREN along with new drakes AND EGGS!
+<li>As such, Nether Dragons reach an ADULT AGE far sooner! Perhaps within a year of age! Plus the oldest any nether dragon will be is around 26 in age as of Shadowlands.
+<li>This is what made them ideal for the <a href="https://warcraft.wiki.gg/wiki/Dragonmaw_clan">Dragonmaw clan</a> to force breed and enslave them in Burning Crusade, as it didn't take years for them to reach an adult age and size that they could be used as mounts, unlike other dragons. This is expressed in the books, games and comics.
+
+<li><b>Jornus is not a 13 year old human child</b>. He's a DRAGON and is well into <b>adulthood in both body and mind</b> and just shy of half way through his expected lifespan. If he WAS human, he would be the equivalent of someone in their 40's.
+
+<hr>
+
+Jornus is completely blind, but doesn't give much outward hint to such right off, outside his eyes not focusing directly on any one thing.
+
+In his mortal form his eyes are open and bright most of the time making it hard to tell he's blind even with the scaring across his face, in his true form they mostly remain closed or half-lidded.
+
+Though he's a Nether Dragon and his magic focus's on the Arcane, some passive traits from his Black Dragon heritage still remain. Like feeling vibrations through the ground that aid him navigating like echolocation.
+
+He is able to shift himself and others into the astral plane of the Nether when needed for a short time. Either to slip past an area unnoticed, hide away or escape a threat he cant handle.
+All of his other senses have become hyper-aware to take over for his eyes.
+
+Jornus can be very forgiving and understanding, especially when it comes to others not getting that he's blind.
+
+He's in part grateful that Void Elves have become a thing, as before then his mortal forms appearance was very, VERY out of place.
+
+He carries with him a basic wooden staff that he uses as a walking stick and a means to help him detect any small lips, curbs or small drops as he walks. It also holds a hidden enchantment that by letting it thud an end against the ground it creates vibrations in still areas so he can feel the area around him. Also good for whacking people with.
+
+He always goes around barefoot when he can, as shoes don't agree with him due to him navigating by touch.
+
+One inspiration for Jornus has been Toph from Avatar, in how she could sense and feel the world around her through vibrations. It allows him to still do battle against opponents they may encounter with somewhat ease and accuracy.
+

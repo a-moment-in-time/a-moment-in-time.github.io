@@ -1,0 +1,205 @@
+[VITAL_INSTRUCTIONS]
+==========================================================================
+⚠️ TRP PROFILE TEXT TEMPLATE - PLEASE READ BEFORE EDITING ⚠️
+==========================================================================
+1. DO NOT CHANGE, DELETE, OR EDIT ANY TEXT INSIDE CAPITAL BRACKETS.
+   (e.g., Leave [BLABLABLA] exactly as they are).
+   If you break or delete a bracket, your info will vanish from the website.
+
+2. ADD YOUR INFO ONLY ON THE LINES BELOW THE BRACKETS.
+   Type your descriptions naturally. 
+
+3. PARAGRAPHS: 
+   To start a new paragraph, hit ENTER TWICE to leave an empty line. 
+   Do not crowd your text into one massive block.
+
+4. FORMATTING CHEATSHEET:
+   * To make text BOLD:   <b>Your Text Here</b>
+   * To make text ITALIC: <i>Your Text Here</i>
+   * To link a character: <a href="?char=name" onclick="switchProfile(event, 'name')">Name</a>
+   * To make a new section header: <h2>Your Text Here</h2>
+   * Image: <img src="images/wowguidebook.png" style="display: block; max-width: 150px; margin: 15px auto; border: 1px solid #dac5a1; box-shadow: 0 4px 8px rgba(80, 59, 49, 0.15);">
+     <ul class="menu-group">
+  <li class="nav-item"><a href="?char=sandria" onclick="switchProfile(event, 'sandria')">Sandria</a></li>
+  <li class="nav-item"><a href="?char=ebben" onclick="switchProfile(event, 'ebben')">Ebben</a></li>
+</ul>
+==========================================================================
+
+
+
+[IMAGE]
+portrait/default.png
+
+[NAME] Baelithan Stormweaver
+
+[PRONOUNCED]
+Bael-leth-ann
+[ALIASES]
+Vega Swiftblade
+"Big Red"
+[GENDER] Male
+ 
+[AGE] 119
+
+[BIRTHPLACE] Ashenvale
+
+[SEXUALITY] Bisexual, Male leaning
+
+[STATUS]Alive
+
+[SPECIES] Night Elf
+
+[GROWTH_STAGE] 
+
+[MORTAL_GUISE]
+
+[HEIGHT] 
+
+[BUILD] Heavily muscular and exceptionally agile
+
+[SCALE_COLOR]
+
+[EYE] 
+
+[HAIR] 
+
+[SKIN_TONE]
+
+[FACTION] Alliance
+
+[OCCUPATION] SI:7/ Assassin for Hire
+
+[LANGUAGE]
+Common
+Darnassian (rarely spoken)
+Passable Dwarven
+Very broken Thalassian
+Hand Sign (sign language) 
+
+[AFFILIATION]
+List
+Here
+
+
+[VOICE]
+Low, rough and ragged, with occasional throat-clearing; formerly smooth and clear.
+
+[INFORMATION]
+Baelithan, more commonly called Bael, works under the name Vega Swiftblade as an assassin for hire. He is a striking, intimidating elf with pale gray skin, vivid blue hair pulled into a high ponytail, a powerful build, and a body marked by years of violence. His right eye is gone, leaving a healed but visibly disfigured socket, while his right ear is roughly torn away partway down and his left ear lacks its very tip. He bears numerous scars, including extensive damage across his upper back. He has no tattoos and keeps his face clean-shaven.
+
+Most strangers meet a guarded loner whose expression warns them not to test his patience. The few people Bael trusts know a different man: warm, protective, affectionate, curious, and capable of remarkable tenderness. Away from assignments, he is happiest with a book, a mechanical project, a good meal, or the full-sized harp he learned to play as a child.
+
+He dresses with little concern for appearances when off duty, favoring battered jeans or trousers, worn shirts or tank tops, and old boots. For formal occasions he favors fine shirts, fitted leather jackets and trousers, quality boots, and fingerless gloves. On assignment, he wears matte-black full-body leathers with dark-blue trim, a hood, and a cloth lower-face covering. A dark cloth wrap can be tied diagonally around his head to conceal his missing right eye.
+
+[HISTORY]
+<h3>Childhood and Escape</h3>
+Bael was the middle of three children and the family's only son. His father was determined to shape him in his own image, enforcing harsh training and answering failure with beatings and humiliation. Bael's mother tried to shield him, and his two sisters were among the few bright spots in his childhood. Lessons at the harp with his mother remain some of his most cherished early memories.
+
+Still a young boy, Bael escaped during a family trip to a harbor for supplies. He slipped aboard a ship as a stowaway, willing to face an unknown destination rather than return to his father's home.
+
+<h3>Years in the Underworld</h3>
+He reached an unfamiliar city alone and homeless. A band of criminals took him in, using his youth to draw unsuspecting people into robberies and ambushes. He learned to handle a dagger and embraced crime partly as an act of defiance against everything his father had demanded of him.
+
+Through his teens and into adulthood, his offenses grew increasingly brutal. He committed assaults, torture, and other serious crimes with little regard for his victims. He cared scarcely more for his own life, drinking heavily, taking drugs, and behaving recklessly. One especially destructive addiction was to blood vile, a red-tinted poison ordinarily used on blades but also smoked for its intoxicating effects. Prolonged use badly damaged his throat and permanently changed his once-clear speaking and singing voice.
+
+<h3>SI:7 and the Loss of His Eye</h3>
+When a member of his criminal group informed on the others, a sting operation led to Bael's arrest and imprisonment. His reputation attracted the attention of SI:7, an organization of rogues and assassins employed to carry out the city's covert, unsavory work. Its leader offered him a bargain: follow their orders and work for pay, and his criminal record would be erased. Bael accepted, becoming the assassin known as Vega Swiftblade.
+
+The arrangement did not immediately change him. Bitter, stubborn, and distrustful after previous betrayals, he insisted on working alone and often disregarded warnings. During one mission he undertook against advice, a struggle overturned a dangerous concoction. Choking, eye-burning fumes filled the space; in the confusion, an attacker overpowered him and tore out his right eye. The permanent injury became, in Bael's mind, proof of his greatest professional mistake: believing he could always manage on his own.
+
+<h3>Rusty's Influence</h3>
+Rusty, a dwarven blacksmith responsible for maintaining SI:7's gear and armor, refused to watch Bael continue destroying himself. Despite Bael's resistance, Rusty challenged his reckless behavior and reminded him that his life had value. He also urged Bael to remember his mother and sisters, who had once cared for him.
+
+Those conversations did not fix Bael overnight. Over years, and through choices of his own, he began to listen, take responsibility for himself, and allow other people close. Rusty encouraged him to try engineering so his hands and mind could be occupied with creating and repairing rather than killing. Bael's love of reading flourished, and he returned to the harp his mother had taught him.
+
+Bael remains dangerous and capable of ruthlessness in his profession, but the indifference that once governed his entire life no longer defines how he treats those he loves. He regards Rusty as a friend and mentor, and has admitted that the dwarf has been more of a father to him than his own father ever was.
+
+<h3>The Life He Keeps Private</h3>
+Only Bael's closest confidants know much of his childhood or criminal past. His recovery has not erased his temper, the people he harmed, or the consequences of his choices. It has given him reasons to care about his future. He has even considered leaving assassination behind to work as an engineer or mechanic.
+
+[PERSONALITY]
+<h3>Temperament</h3>
+Bael is a loner whose bearing conveys a clear warning: do not start trouble with him. His temper is formidable, but not easily provoked. Serious setbacks on the job or someone deliberately picking a fight are the likeliest triggers. In the field he may deliberately let his anger loose; around loved ones he works much harder to contain it, stepping away to cool off or directing frustration at an inanimate object rather than risk hurting them.
+
+<h3>Personality</h3>
+Outwardly stern, stubborn, and difficult to approach, Bael is startlingly gentle with those who have earned his trust. He is affectionate, protective, tender, and often quietly humorous. His warmth is genuine, not a performance, though he reveals it selectively. He enjoys sharing ordinary moments with the people he loves.
+
+<h3>Prejudices</h3> Bael has a heavy dislike for anyone of noble blood or a wealthy lifestyle; he sees them as nothing more than snobby ignorant fools who are blind to the real world. Not that he don’t have friends of such backgrounds, though to him there the exception. He also cares little for people in positions of power and authority, hating being told what to do. 
+
+<h3>Moral Values</h3>
+Bael does not pretend to have a spotless past. He has done terrible things, and his profession still demands violence. Nevertheless, he has learned to value his own life and the lives of people close to him. Loyalty and trust matter deeply; betrayal is especially difficult for him to overlook.
+
+<h3>Ambitions</h3>
+He has occasionally considered retiring from assassination to pursue engineering and mechanical work. It is a life he can imagine enjoying, even if he has not yet committed to it.
+
+<h3>Likes</h3>
+Nonfiction books, history, cultures, distant lands, accounts of real events, engineering, mechanical design, tools, his custom-built motorcycle, cooking, unfamiliar cuisines, bourbon, wine, certain ales, sweetened coffee, harp music, and time spent with loved ones.
+
+<h3>Dislikes</h3>
+Needless provocation, assignments going wrong, being stared at because of his eye, betrayal, and reminders of the self-destructive man he once was.
+
+<h3>Fears and Insecurities</h3>
+For years Bael considered his missing right eye grotesque and hid it even when alone. He once allowed it to be seen mainly as a means of frightening targets, or when someone forcibly removed his covering. Letting loved ones see it, including his romantic partner, took considerable trust. Their acceptance helped him grow more comfortable over time. He now generally covers it for work, when the socket bothers him, or to avoid public stares.
+
+His damaged voice is another source of shame. He remembers when it was smooth and his singing voice was lovely. He still sings, usually in private, but the roughness reminds him of his addiction to blood vile and how close it came to killing him. After he began caring for himself, he swore never to use it again.
+
+<h3>Habits</h3>
+He leaves stacks of books wherever he last read them and shelves others haphazardly. He enjoys sweetened coffee, sometimes with a splash of whiskey or whatever liquor is available. He drinks frequently and has an unusually high alcohol tolerance, making him a dangerous opponent in a drinking contest. He occasionally smokes cigars. He can be coaxed into dancing with someone dear to him, though he warns them about his two left feet.
+
+[ABILITIES]
+<h3>Education and Training</h3>
+His father's harsh childhood training, years surviving among criminals, and subsequent work with SI:7 shaped his combat abilities. He learned daggers in the underworld and developed formidable agility, reflexes, and close-quarters fighting skills. Much of his engineering knowledge has grown from reading, practical experimentation, and Rusty's encouragement.
+
+<h3>Combat Abilities</h3>
+Bael's preferred weapons are daggers, paired short swords, and a long-muzzled handgun. He is quick on his feet, precise in a fight, and experienced in assassination. His missing right eye affects his field of vision, a lasting consequence of the mission he recklessly attempted alone.
+
+<h3>Trade Skills</h3>
+He is a capable engineer and mechanic who enjoys designing machines, repairing equipment, and working with tools. His greatest mechanical achievement is a customized, heavily upgraded motorcycle he built himself. He is also a skilled home cook, especially adept with steak, vegetables, and chili, and enjoys experimenting with dishes from different cultures.
+
+<h3>Hobbies</h3>
+Bael is an avid reader with a substantial collection focused on history, cultures, distant lands, true events, and engineering. Fiction and romance novels rarely interest him.
+
+His mother taught him to play a full-sized floor-standing harp while he was young. When he returned to music as an adult, his skill came back quickly, and he purchased a full-sized harp of his own for its rich, rustic sound. He can play smaller handheld harps as well. He plays piano at an amateur level and is learning guitar, although coordinating fretting and strumming has proved surprisingly difficult.
+
+He loves cooking but is spectacularly unlucky at baking: cookies burn, cakes collapse, and pastries emerge undercooked or rock-hard. Pizza may be the lone exception. Friends have learned to leave him the main course and assign dessert to someone else.
+
+Despite his extraordinary combat footwork, he is a dreadful dancer. Slow swaying is manageable, but complicated steps bring stumbles, trips, and stepped-on toes. He jokes openly about this and still enjoys dancing with loved ones.
+
+He also collects swords and daggers, sometimes keeping weapons taken from targets for display or future use.
+
+[RELATIONS]
+<h2>Family</h2>
+<h3>Father</h3>His father Mathordor is a stern, serious sort with strong ideals and expectations. The man had plans for Baelithan to follow in his family’s footsteps even before his birth, but the boy’s frailness as a child was not desired, and was deemed a disgrace to the family before he could even walk. This didn’t stop the man from personally training Bael, though calling it training may be a long shot. Nothing the boy did ever pleased his father; nothing ever seemed ‘right’ in the man’s eyes, and due to this his father’s temper often flared.  They would often return home, Bael battered and looking ‘dead inside’. His mother never knew the full extent of the abuse, or perhaps she was in denial, or fearful herself due to her illness. Rarely would she speak up her concerns, only for them to be thrown out.
+
+<h3>Mother</h3>His mother Noraisha suffered from an illness (much like Multiple Sclerosis) that had plagued her even before she was wed, but it was moderate and able to be kept hidden as to not bring shame to her or the family she wed into. But as she became pregnant with Bael, the symptoms gradually got worse and she could no longer hide it. This left Bael to be born early, weak and frail.  He was often blamed for his mother’s illness by his father, causing him to be distant with her and only rarely interacting with her. “She gets worse when you’re around.”
+
+<h3>Grandfather</h3>Bael was very close with his grandfather Olindure, who would at times come around and offer to look after the children, or take Bael off for some training of his own, in a more proper way. It is through his grandfather that Baelithan discovered he has a natural attunement to healing energies, something the boy found more to his liking than what his father desired of him. Though after a time his grandfather started to catch wind that something was off with his grandson, who would simply say everything was fine.  Baelithan had become good at lying about matters, but his grandfather was starting to see through it, and with a lot of coaxing and promises that everything would stay just between them, the boy cracked.  But later on Bael happened to over hear his grandfather speaking with his father regarding matters he had opened up about. This led Bale to distrust his grandfather… and caused his father’s rage to grow.
+
+
+<h3>Sisters</h3>Baelithan was born into a Noble family line, though it’s something he’d rarely admit to. He’s the middle child to two sisters, Tailanna the eldist, and Shallora the youngest, both of whom he was very close to in his younger years. While his elder sister was very outgoing, the younger was very quiet and shy, needing to be coaxed into more adventurous play.  Bael’s parents, however, were another matter. 
+
+<h3>Associations</h3>
+<h4>Rusty</h4>
+A dwarven blacksmith associated with SI:7, Rusty became Bael's persistent mentor, close friend, and an unofficial father figure. Rusty introduced him to engineering and helped him begin questioning his self-destructive life.
+
+<h4>SI:7</h4>
+The organization that recruited Bael from prison and employs him for covert assignments.
+
+<h4>Romantic Partner</h4>
+Bael has allowed a romantic partner close enough to see vulnerabilities he once hid from everyone, including his injured eye. Further identifying details have not yet been established.
+
+[NOTES]
+<h3>Appearance and Clothing</h3>
+Bael is clean-shaven, with no tattoos or rings. His long blue hair is typically tied high. His right ear is roughly torn away halfway down, while the left is missing only its tip. His body bears numerous old scars, including a large patch of scar tissue on his upper back. The established visual reference determines the precise placement of individual scars.
+
+His eyemask is a long, dark cloth tied around his head and drawn diagonally across the face to cover the missing right eye properly; it is not a small conventional eyepatch. His casual clothing consists of worn, often torn jeans or other trousers, old shirts or tank tops, and battered boots. Formal attire is more refined, often with leather and fingerless gloves. Work attire is matte-black full-body leather with dark-blue trim, a hood, and a lower-face cloth mask.
+
+<h3>Rusty's Unspoken History — Author Knowledge</h3>
+Bael knows only that Rusty is divorced and believes Rusty's former wife left because she objected to the time he spent working. Bael's reaction is essentially, 'Her loss.'
+
+Unknown to Bael, Rusty and his former wife lost a son after the young man's own destructive downward spiral. She blamed Rusty for being absent and prioritizing his work, while Rusty maintained that he helped whenever he could and that his blacksmithing paid for their family's necessities. Their grief and disagreement shattered the marriage. Bael's self-destructive behavior reminded Rusty of his son, motivating him to intervene. Rusty has never told Bael any of this, saying only that he 'had his reasons' and was tired of seeing Bael pointlessly destroy himself.
+
+<h3>Other Trivia</h3>
+Bael's alcohol tolerance is exceptionally high. He prefers bourbon, also drinks wine and some ales, and enjoys the occasional cigar. He refuses to touch blood vile again.
+
+The full-sized harp is a cherished personal possession. His hand-built motorcycle is his pride and joy. He is far better at preparing dinner than dessert, and far better at evading a blade than executing dance steps.

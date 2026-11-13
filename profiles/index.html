@@ -1,0 +1,714 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Azeroth: A Moment in Time — Profiles</title>
+    <!-- below is for when the css is handled in its own file. currently loaded below this for ease of editing -->
+    <!--  <link rel="stylesheet" type="text/css" href="profile.css">  -->
+	
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!--  https://icons.getbootstrap.com -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rpg-awesome/0.2.0/css/rpg-awesome.min.css"> <!--  https://nagoshiashumari.github.io/Rpg-Awesome/ -->
+	<style>
+/* ===================================================
+   GLOBAL STYLES & COLOR THEME (From Index)
+   =================================================== */
+	@import url('https://fonts.googleapis.com/css?family=Alegreya:400,700,700i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext');
+/* font-family: 'Alegreya', serif; */
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya+SC:400,700,700i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext');
+/* font-family: 'Alegreya SC', serif; */
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext');
+/* font-family: 'Source Sans Pro', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css?family=Kalam:400,700&subset=latin-ext');
+/* font-family: 'Kalam', cursive; */
+	
+	
+        body { 
+	background-color: #FDF1DC; 
+		color: #503b30; 
+		font-family: 'Source Sans Pro', sans-serif; 
+		margin: 0; 
+		padding: 0px;  
+		background:url('../images/paperbg2.jpg');
+		}
+
+   a {
+		 color: #ff0000; 
+		 text-decoration: none;  
+		 text-transform: none;  
+		 border-bottom: 1px dashed #3d251b;
+}
+		 
+  a:hover { 
+		 color: #ffaa44; 
+		 background-color: #2b1a13; 
+ }
+
+		h1 {
+  font-family: 'Alegreya SC', serif;
+  font-weight: 700;
+  font-size: 42px;
+  margin: 0; 
+		padding: 0px; 
+}
+
+h2 {
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #900b0b;   
+  margin: 0; 
+		padding: 0px; 
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #a08264;
+  text-transform: uppercase;
+}
+
+
+h3 {
+  font-family: 'Alegreya SC', serif;
+  font-weight: 700;
+  font-size: 26px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin: 0; 
+  padding: 0px; 
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #a08264;
+}
+   
+
+h4 {
+  font-family: 'Alegreya SC', serif;
+  font-weight: 700; 
+  font-size: 22px;
+    margin: 0; 
+  padding: 0px; 
+}
+
+h5 {
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+    margin: 0; 
+  padding: 0px; 
+}
+		
+
+ /* Tells the browser to automatically convert line breaks into paragraphs  <div class="character-bio-text"> </div>*/
+.character-bio-text {
+    white-space: pre-wrap !important; 
+}
+.character-bio-text br {
+    display: none !important;
+}
+
+
+.msg-card {    /* Hightlight message  <div class="msg-card"> </div>*/
+		background-color: #ffffff; 
+		border-left: 4px solid #ffaa44; 
+		padding: 15px 20px; 
+		border-radius: 0 6px 6px 0; 
+}
+ .msg-card strong { 
+		color: #900b0b; 
+		display: block; 
+		margin-bottom: 5px; 
+}
+		
+.msg-card p { 
+		margin: 0;  
+		font-size: 0.95rem; 
+		color: #503b30; 
+		font-family: 'Kalam', cursive;
+}
+
+
+.highlight { 
+		display: block; 
+		color: #000000; 
+		border-left: 4px solid #8b1c1c;  
+		padding: 0px 10px; 
+		margin: 0; 
+}
+
+
+
+
+
+/* 1. DESKTOP GRID LAYOUT (Default View) */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px; 
+  gap: 30px;
+  max-width: 1500px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+
+/* ===================================================
+   TOP TAB MECHANICS (MAIN CONTENT)
+   =================================================== */
+.main-content-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  .top-tab-btn {    /* Unselected top tabs */
+    padding: 12px 24px;
+    background-color: rgba(61, 37, 27, 0.20); 
+    color: #503b31;
+    cursor: pointer;
+    
+    border-bottom: none;
+	font-family: 'Alegreya SC', serif;
+    margin-right: 5px;
+    font-weight: bold;
+	font-size: 22px;
+    border-radius: 6px 6px 0 0;
+    transition: background 0.2s, color 0.2s;
+  }
+  
+  .top-tab-btn:hover { /* Unselected top tabs Hover Over */
+    background-color: rgba(61, 37, 27, 0.30); 
+   color: #1c1410;
+  }
+
+  .top-tab-panel { /* Selected in focus tab body */
+    width: 100%;
+    order: 99; 
+    display: none;
+    padding: 25px;
+    background-color: rgba(61, 37, 27, 0.10); 
+    border-radius: 0 6px 6px 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+
+
+.top-tab-panel li {  
+		margin-left: 25px; 
+		    margin-bottom: 2px !important; /* Tweaking this number lets you control the exact spacing */
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+
+
+  input[type="radio"]:checked {  /* Selected in focus tab top */
+    + .top-tab-btn {
+     background-color: rgba(61, 37, 27, 0.10);  
+        color: #900b0b; 
+      border-color: #dac5a1;
+  /*    border-bottom: 1px solid #2b1a13; */
+      margin-bottom: -1px; 
+      z-index: 2;
+    }
+    + .top-tab-btn + .top-tab-panel {
+      display: block;
+    }
+  }
+}
+
+/* ===================================================
+   SIDE TABS MECHANICS (SIDEBAR PANEL)
+   =================================================== */
+.sidebar-tabs {  /* Right side menu main body*/
+  background-color: rgba(61, 37, 27, 0.20);  
+   /*border: 1px solid #3a3a3a; */
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  
+  /* Desktop Sticky Placement */
+  position: sticky;
+  top: 20px; 
+
+  .bio-image-wrapper img {  /* Character image to fit the space*/
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #503b30;
+  }
+
+  .sidebar-tab-system {
+    display: flex;
+    flex-wrap: wrap;
+
+    .side-tab-btn {   /*  Non selected tabs*/
+      flex: 1; 
+	  	font-family: 'Alegreya SC', serif;
+		font-size: 18px;
+      text-align: center;
+      padding: 10px;
+background-color: rgba(61, 37, 27, 0.20);
+      color: #503b31;
+      cursor: pointer;
+      margin-right: 5px;
+      font-weight: bold;
+      transition: background 0.2s;
+	  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+	    .side-tab-btn:last-child {
+    margin-right: 0;
+	 }
+	 
+	 
+	 
+    .side-tab-btn:hover {  /*  Tabs on hover over*/
+    background-color: rgba(61, 37, 27, 0.30); 
+   color: #1c1410;
+    }
+
+    .side-tab-panel {
+      width: 100%;
+      order: 99; 
+      display: none;
+      padding: 15px 5px 0 5px;
+    }
+    
+    input[type="radio"]:checked {   /*  Tabs sellected*/
+      + .side-tab-btn {
+  background-color: rgba(61, 37, 27, 0.0);  
+        color: #900b0b; 
+        border-bottom: none;
+		margin-right: 5px;
+      }
+      + .side-tab-btn + .side-tab-panel {
+        display: block;
+      }
+    }
+  }
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  li {
+    padding: 4px 0;
+    border-bottom: 1px dashed #a08264;
+    font-size: 0.95rem;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Source Sans Pro', sans-serif; 
+    strong {
+     color: #900b0b; 
+    }
+  }
+  
+  li:last-child {
+    border-bottom: none;
+  }
+}
+
+hr {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #1c1410;
+}
+
+
+/* ===================================================
+   2. MOBILE BREAKPOINT HANDLING (Screens under 768px)
+   =================================================== */
+@media (max-width: 768px) {
+  .profile-grid {
+    /* 1. Flattens into a single vertical row layout */
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .sidebar-tabs {
+    /* 2. Moves the side card to row #1, pushing main content down */
+    grid-row: 1;
+    
+    /* 3. Turns off sticky behavior so it scrolls like normal content */
+    position: relative;
+    top: auto;
+  }
+  
+  .main-content-tabs {
+    /* 4. Ensures the narrative block follows right underneath */
+    grid-row: 2;
+  }
+}
+	
+	
+	
+/* ===================================================
+   CONDITIONAL DISPLAY — CONTROLLED BY THE CHARACTER LOADER
+   Empty sections are marked with is-hidden. A missing/unreadable
+   character file also removes the entire portrait/details column.
+   =================================================== */
+.is-hidden {
+  display: none !important;
+}
+.profile-grid.no-sidebar {
+  grid-template-columns: minmax(0, 1fr);
+}
+.profile-grid.no-sidebar .sidebar-tabs {
+  display: none !important;
+}
+
+	</style>
+	
+	
+	
+	
+	
+</head>
+<body>
+<br>
+<div class="profile-grid">
+  
+  <!-- ====== THE MAIN BODY CONTENT (TOP TABS) ====== -->
+  <main class="main-content-tabs">
+    <!-- Tab Info -->
+    <input type="radio" id="main-tab-info" name="main-sections" checked>
+    <label for="main-tab-info" class="top-tab-btn">Information</label>
+    <div class="top-tab-panel">
+  <div id="section-information" class="character-bio-text"><b>If you are seeing this chronicle note</b>, either this character's narrative records have not been scribed yet, or the archive server is currently experiencing a temporal layout delay. Please refresh the ledger or select another character from the world codex menu.</div>
+    </div>
+  <!-- Tab Info -->
+  
+    <!-- Tab : History -->
+    <input type="radio" id="main-tab-history" name="main-sections">
+    <label for="main-tab-history" class="top-tab-btn">History</label>
+    <div class="top-tab-panel">
+      <div id="section-history" class="character-bio-text"></div>
+    </div>
+	    <!-- Tab  History -->
+		  
+		  <!-- Tab  Personality -->
+    <input type="radio" id="main-tab-personality" name="main-sections">
+    <label for="main-tab-personality" class="top-tab-btn">Personality</label>
+    <div class="top-tab-panel">
+	  <div id="section-personality" class="character-bio-text"></div>
+    </div>
+
+	    <!-- Tab Personality -->  
+		  
+		  
+		      <!-- Tab  Abilities -->
+    <input type="radio" id="main-tab-abilities" name="main-sections">
+    <label for="main-tab-abilities" class="top-tab-btn">Abilities</label>
+    <div class="top-tab-panel">
+	  <div id="section-abilities" class="character-bio-text"></div>
+    </div>
+	    <!-- Tab Abilities -->    
+		
+		
+		
+		<!-- Tab Relations -->
+    <input type="radio" id="main-tab-relations" name="main-sections">
+    <label for="main-tab-relations" class="top-tab-btn">Relations</label>
+    <div class="top-tab-panel">
+      <div id="section-relations" class="character-bio-text"></div>
+    </div>
+	    <!-- Tab Relations -->    
+		
+		<!-- Tab Notes -->
+    <input type="radio" id="main-tab-notes" name="main-sections">
+    <label for="main-tab-notes" class="top-tab-btn">Notes</label>
+    <div class="top-tab-panel">
+      <div id="section-notes" class="character-bio-text"></div>
+    </div>
+	    <!-- Tab Notes -->
+		  
+		  
+		  
+		  
+  </main>
+
+  <!-- ====== THE SIDE PANEL (SIDE TABS) ====== -->
+  <aside class="sidebar-tabs">
+    <div class="bio-image-wrapper">
+	<img id="character-portrait" src="portrait/default.png" alt="Character portrait">
+    </div>
+
+    <div class="sidebar-tab-system">
+      <!-- Sub-Tab 1: Basic Info -->
+      <input type="radio" id="side-tab-basics" name="sidebar-details" checked>
+      <label for="side-tab-basics" class="side-tab-btn">Identity</label>
+      <div class="side-tab-panel">
+        <ul class="info-list">
+          <li><strong>Name:</strong> <div id="section-name" class="character-bio-text"></div></li>
+		  <li><strong>Pronounced:</strong> <div id="section-pronounced" class="character-bio-text"></div></li>
+		  <li id="row-aliases"><strong>Aliases:</strong> <div id="section-aliases" class="character-bio-text"></div></li>
+		   </ul>
+		<hr>
+		 <ul class="info-list">
+			<li><strong>Gender:</strong> <div id="section-gender" class="character-bio-text"></div></li>
+			<li><strong>Age:</strong> <div id="section-age" class="character-bio-text"></div></li>
+			<li><strong>Birthplace:</strong> <div id="section-birthplace" class="character-bio-text"></div></li>
+			<li id="row-sexuality"><strong>Sexuality:</strong> <div id="section-sexuality" class="character-bio-text"></div></li>
+			<li><strong>Status:</strong> <div id="section-status" class="character-bio-text"></div></li>
+        </ul>
+      </div>
+<!-- Sub-Tab 1: Basic Info -->
+
+
+      <!-- Sub-Tab 2: Appearance -->
+      <input type="radio" id="side-tab-looks" name="sidebar-details">
+      <label for="side-tab-looks" class="side-tab-btn">Appearance</label>
+      <div class="side-tab-panel">
+        <ul class="info-list">
+			<li><strong>Species:</strong> <div id="section-species" class="character-bio-text"></div></li>
+			<li id="row-growth-stage"><strong>Growth Stage:</strong> <div id="section-growth-stage" class="character-bio-text"></div></li>
+			<li id="row-mortal-guise"><strong>Mortal Guise:</strong> <div id="section-mortal-guise" class="character-bio-text"></div></li>
+		<li><strong>Height:</strong> <div id="section-height" class="character-bio-text"></div></li>
+			  <li><strong>Build:</strong> <div id="section-build" class="character-bio-text"></div></li>
+		   </ul>
+		   <hr>
+		   <ul class="info-list">
+          <li id="row-scale-color"><strong>Scale Color:</strong> <div id="section-scale-color" class="character-bio-text"></div></li>
+          <li><strong>Eye Color:</strong><div id="section-eye" class="character-bio-text"></div></li>
+	<li><strong>Hair Color:</strong> <div id="section-hair" class="character-bio-text"></div></li>
+		  <li id="row-skin-tone"><strong>Skin Tone:</strong> <div id="section-skin-tone" class="character-bio-text"></div></li>
+        </ul>
+      </div>
+	  <!-- Sub-Tab 2: Appearance -->
+	  
+	  
+	        <!-- Sub-Tab 3: Position -->
+      <input type="radio" id="side-tab-position" name="sidebar-details">
+      <label for="side-tab-position" class="side-tab-btn">Position</label>
+      <div class="side-tab-panel">
+        <ul class="info-list">
+		<li><strong>Faction:</strong> <div id="section-faction" class="character-bio-text"></div></li>
+		<li id="row-occupation"><strong>Occupation:</strong> <div id="section-occupation" class="character-bio-text"></div></li>
+		<li><strong>Language(s):</strong> <div id="section-language" class="character-bio-text"></div></li>
+		<li><strong>Affiliation(s):</strong> <div id="section-affiliation" class="character-bio-text"></div></li>
+		 <li id="row-voice"><strong>Voice Claim:</strong> <div id="section-voice" class="character-bio-text"></div></li>
+		  
+        </ul>
+      </div>
+	  <!-- Sub-Tab 3: Position -->
+	  
+	  
+	  
+    </div>
+  </aside>
+
+</div>
+<br>
+<script>
+// ===================================================
+// CHARACTER PROFILE LOADER
+// Members only need to supply a matching name.txt file.
+// Empty fields (or fields omitted by older templates) are hidden.
+// If loading fails, ONLY the Information tab and its notice appear.
+// ===================================================
+
+const MAIN_TABS = ['information', 'history', 'personality', 'abilities', 'relations', 'notes'];
+const SIDE_TABS = ['basics', 'looks', 'position'];
+const MISSING_CHRONICLE_NOTICE = document.getElementById('section-information').innerHTML;
+const EMPTY_INFORMATION_NOTICE = 'This character’s introductory information has not been written yet.';
+let profileLoadNumber = 0; // Prevents an older, slower request from replacing a newer one.
+
+function hasContent(value) {
+  const text = (value || '').trim();
+  return text !== '' && !/^(none|n\/a)$/i.test(text);
+}
+
+// Hide/show the radio button, its visible label, and its content panel together.
+function setTabVisible(inputId, visible) {
+  const radio = document.getElementById(inputId);
+  if (!radio) return;
+  const label = radio.nextElementSibling;
+  const panel = label ? label.nextElementSibling : null;
+  for (const element of [radio, label, panel]) {
+    if (element) element.classList.toggle('is-hidden', !visible);
+  }
+}
+
+function selectFirstAvailableSideTab() {
+  for (const tab of SIDE_TABS) {
+    const radio = document.getElementById(`side-tab-${tab}`);
+    if (radio && !radio.classList.contains('is-hidden')) {
+      radio.checked = true;
+      return;
+    }
+  }
+}
+
+// Start from a blank, safe screen each time, including when switching
+// characters via same-page links or the browser Back/Forward buttons.
+function resetProfileView() {
+  document.getElementById('main-tab-info').checked = true;
+  document.getElementById('side-tab-basics').checked = true;
+  document.querySelector('.profile-grid').classList.add('no-sidebar');
+  document.querySelector('.bio-image-wrapper').classList.add('is-hidden');
+
+  document.querySelectorAll('[id^="section-"]').forEach(element => {
+    element.innerHTML = '';
+  });
+  document.querySelectorAll('.side-tab-panel .info-list li').forEach(row => {
+    row.classList.add('is-hidden');
+  });
+  document.querySelectorAll('.side-tab-panel .info-list').forEach(list => {
+    list.classList.add('is-hidden');
+  });
+  document.querySelectorAll('.side-tab-panel hr').forEach(rule => {
+    rule.classList.add('is-hidden');
+  });
+  for (const tab of MAIN_TABS) {
+    setTabVisible(`main-tab-${tab === 'information' ? 'info' : tab}`, tab === 'information');
+  }
+  for (const tab of SIDE_TABS) {
+    setTabVisible(`side-tab-${tab}`, false);
+  }
+  // The portrait won't be visible until a successful load supplies an image.
+  document.getElementById('character-portrait').removeAttribute('src');
+}
+
+function showMissingChronicle() {
+  // This also covers an unreadable file, not just an HTTP 404.
+  resetProfileView();
+  document.getElementById('section-information').innerHTML = MISSING_CHRONICLE_NOTICE;
+}
+
+function displayCharacter(sections) {
+  // Sections is a Map of bracket names to text/HTML, e.g. NAME => Sandria.
+  for (const [tag, content] of sections) {
+    if (tag === 'image') continue;
+    const field = tag.replace(/_/g, '-');
+    const element = document.getElementById(`section-${field}`);
+    if (element && hasContent(content)) {
+      element.innerHTML = content;
+    }
+  }
+
+  // Information always stays available, even if it has not been written.
+  const information = document.getElementById('section-information');
+  if (!hasContent(information.innerHTML)) {
+    information.textContent = EMPTY_INFORMATION_NOTICE;
+  }
+
+  // All other main tabs exist only when their narrative field has content.
+  for (const tab of MAIN_TABS) {
+    if (tab !== 'information') {
+      const element = document.getElementById(`section-${tab}`);
+      setTabVisible(`main-tab-${tab}`, Boolean(element && hasContent(element.innerHTML)));
+    }
+  }
+
+  // Hide *every* empty sidebar line, including ones without row- IDs.
+  document.querySelectorAll('.side-tab-panel .info-list li').forEach(row => {
+    const value = row.querySelector('[id^="section-"]');
+    row.classList.toggle('is-hidden', !(value && hasContent(value.innerHTML)));
+  });
+
+  // Hide empty lists and their separating rules so there are no stray lines.
+  document.querySelectorAll('.side-tab-panel .info-list').forEach(list => {
+    const anyVisibleRows = [...list.querySelectorAll('li')]
+      .some(row => !row.classList.contains('is-hidden'));
+    list.classList.toggle('is-hidden', !anyVisibleRows);
+  });
+  document.querySelectorAll('.side-tab-panel hr').forEach(rule => {
+    const previousList = rule.previousElementSibling;
+    const nextList = rule.nextElementSibling;
+    const bothVisible = previousList && nextList &&
+      !previousList.classList.contains('is-hidden') &&
+      !nextList.classList.contains('is-hidden');
+    rule.classList.toggle('is-hidden', !bothVisible);
+  });
+
+  // Identity / Appearance / Position vanish individually when entirely empty.
+  let anySidebarDetails = false;
+  for (const tab of SIDE_TABS) {
+    const radio = document.getElementById(`side-tab-${tab}`);
+    const panel = radio.nextElementSibling.nextElementSibling;
+    const anyVisibleRows = [...panel.querySelectorAll('li')]
+      .some(row => !row.classList.contains('is-hidden'));
+    setTabVisible(`side-tab-${tab}`, anyVisibleRows);
+    if (anyVisibleRows) anySidebarDetails = true;
+  }
+  selectFirstAvailableSideTab();
+
+  // Keep the usual portrait if provided; otherwise show only the sidebar
+  // information (if any). Never show the old character's portrait.
+  const image = sections.get('image');
+  if (hasContent(image)) {
+    const portrait = document.getElementById('character-portrait');
+    portrait.src = image.trim();
+    document.querySelector('.bio-image-wrapper').classList.remove('is-hidden');
+  }
+  if (anySidebarDetails || hasContent(image)) {
+    document.querySelector('.profile-grid').classList.remove('no-sidebar');
+  }
+}
+
+async function loadCharacter(characterName) {
+  const thisLoad = ++profileLoadNumber;
+  const name = String(characterName || '').toLowerCase().trim();
+  resetProfileView();
+  document.getElementById('section-information').textContent = 'Opening character chronicle…';
+
+  // Only normal filename characters are accepted for ?char=...
+  if (!/^[a-z0-9_-]+$/.test(name)) {
+    showMissingChronicle();
+    return;
+  }
+
+  try {
+    const response = await fetch(`${encodeURIComponent(name)}.txt`);
+    if (!response.ok) throw new Error(`Character file unavailable (HTTP ${response.status})`);
+    const fullText = await response.text();
+    if (thisLoad !== profileLoadNumber) return;
+
+    // Last occurrence wins, so even older profiles with instruction text work.
+    const chunks = fullText.split(/\[([A-Z_]+)\]/);
+    const sections = new Map();
+    for (let index = 1; index < chunks.length; index += 2) {
+      sections.set(chunks[index].toLowerCase(), (chunks[index + 1] || '').trim());
+    }
+
+    // A server misconfiguration can return an HTML error page with HTTP 200.
+    // Don't treat that as a successfully loaded profile.
+    if (![...sections.keys()].some(tag => tag === 'information' || tag === 'name' || tag === 'history')) {
+      throw new Error('No recognizable character profile fields were found');
+    }
+    displayCharacter(sections);
+  } catch (error) {
+    if (thisLoad !== profileLoadNumber) return;
+    console.warn('Unable to open character chronicle:', error);
+    showMissingChronicle();
+  }
+}
+
+// Keep compatibility with links already written into character .txt files.
+function switchProfile(event, characterName) {
+  if (event && event.preventDefault) event.preventDefault();
+  const name = String(characterName || '').toLowerCase().trim();
+  window.history.pushState({ char: name }, '', `?char=${encodeURIComponent(name)}`);
+  loadCharacter(name);
+}
+
+// Read the real URL on Back/Forward, including initially loaded history entries.
+function loadFromAddressBar() {
+  const name = new URLSearchParams(window.location.search).get('char') || 'default';
+  loadCharacter(name);
+}
+window.addEventListener('popstate', loadFromAddressBar);
+window.addEventListener('DOMContentLoaded', loadFromAddressBar);
+</script>
+
+
+
+
+</body>

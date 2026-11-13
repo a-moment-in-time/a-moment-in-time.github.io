@@ -1,0 +1,118 @@
+[INSTRUCTIONS]
+==========================================================================
+⚠️ TRP PROFILE TEXT TEMPLATE - PLEASE READ BEFORE EDITING ⚠️
+==========================================================================
+1. DO NOT CHANGE, DELETE, OR EDIT ANY TEXT INSIDE CAPITAL BRACKETS.
+   (e.g., Leave [HISTORY], [APPEARANCE], and [GENDER] exactly as they are).
+   If you break or delete a bracket, your info will vanish from the website.
+
+2. ADD YOUR INFO ONLY ON THE LINES BELOW THE BRACKETS.
+   Type your descriptions naturally. 
+
+3. PARAGRAPHS: 
+   To start a new paragraph, hit ENTER TWICE to leave an empty line. 
+   Do not crowd your text into one massive block.
+
+4. FORMATTING CHEATSHEET:
+   * To make text BOLD:   <b>Your Text Here</b>
+   * To make text ITALIC: <i>Your Text Here</i>
+   * To link a character: <a href="?char=name" onclick="switchProfile(event, 'name')">Name</a>
+   * To make a new section header: <h2>Your Text Here</h2>
+   * Image: <img src="images/wowguidebook.png" style="display: block; max-width: 150px; margin: 15px auto; border: 1px solid #dac5a1; box-shadow: 0 4px 8px rgba(80, 59, 49, 0.15);">
+     <ul class="menu-group">
+  <li class="nav-item"><a href="?char=sandria" onclick="switchProfile(event, 'sandria')">Sandria</a></li>
+  <li class="nav-item"><a href="?char=ebben" onclick="switchProfile(event, 'ebben')">Ebben</a></li>
+</ul>
+==========================================================================
+
+
+
+[IMAGE]
+portrait/default.png
+
+[NAME] Tailanna Stormweaver
+
+[PRONOUNCED]
+Tai-lann-a
+[ALIASES]
+Tai
+[GENDER] Female
+ 
+[AGE] 
+128
+
+[BIRTHPLACE] Ashenvale
+
+[SEXUALITY] Asexual
+
+[STATUS] Alive
+
+[SPECIES] 
+Night Elf
+
+[GROWTH_STAGE] 
+
+[MORTAL_GUISE]
+
+[HEIGHT] 
+7"4
+
+[BUILD] Slim and Fit
+
+[SCALE_COLOR]
+
+[EYE] Silver
+
+[HAIR] Silvery Blue
+
+[SKIN_TONE]
+
+[FACTION] Neutral 
+
+[OCCUPATION] Freelance Huntress & Tracker
+
+[LANGUAGE]
+Common
+ Darnassian
+ Orcish
+
+[AFFILIATION]
+Alliance (Neutral party)
+Shattered Sun Offensive
+Argent Crusade
+
+
+[VOICE]
+
+
+
+
+[INFORMATION]
+Basic Information Here
+
+
+
+[HISTORY]
+This is where the character's long-form biography begins. 
+
+
+[ABILITIES]
+<h2>Education/Training</h2>
+	  
+<h2>Abilities</h2>
+
+<h2>Trade Skills</h2>
+		
+<h2>Hobbies</h2>
+
+
+[RELATIONS]
+Any family ties here
+
+[NOTES]
+Eldest of three born to Priestess Noraisha and Archdruid Mathordor Stormweaver
+She is viewed as a deserter to her families cause by her father, due to forgoing the path her family desired of her (a priest) and chose to become a huntress instead. This was done in protest to her fathers abusive treatment to her younger brother causing him to flee from home, and vanishing into the world.
+Through her respect and devotion to nature, she has earned the trust and favor of many forest spirits (Spirit Beast's) that come to her aid when called.
+She's a firm believer that one should not judge individuals based on the actions of others, rather horde or alliance. Just because there's a few or a group of bad apples, don't mean they all are that way.
+She is very much neutral when it comes to the alliance/horde conflict. To the point she hated Varian, blaming him for being blind and encouraging the continued conflict every time peace had a chance to happen.
+She has an half orc son whom she gave up willingly per agreement to aid an old Orc friend in acquiring a heir to his bloodline.

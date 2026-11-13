@@ -1,0 +1,105 @@
+[VITAL_INSTRUCTIONS]
+==========================================================================
+⚠️ TRP PROFILE TEXT TEMPLATE - PLEASE READ BEFORE EDITING ⚠️
+==========================================================================
+1. DO NOT CHANGE, DELETE, OR EDIT ANY TEXT INSIDE CAPITAL BRACKETS.
+   (e.g., Leave [BLABLABLA] exactly as they are).
+   If you break or delete a bracket, your info will vanish from the website.
+
+2. ADD YOUR INFO ONLY ON THE LINES BELOW THE BRACKETS.
+   Type your descriptions naturally. 
+
+3. PARAGRAPHS: 
+   To start a new paragraph, hit ENTER TWICE to leave an empty line. 
+   Do not crowd your text into one massive block.
+
+4. FORMATTING CHEATSHEET:
+   * To make text BOLD:   <b>Your Text Here</b>
+   * To make text ITALIC: <i>Your Text Here</i>
+   * To link a character: <a href="?char=name" onclick="switchProfile(event, 'name')">Name</a>  
+					Example: <a href="?char=sandria" onclick="switchProfile(event, 'sandria')">Sandria</a>
+   * To make a new section header: 
+<h1>H1 Title</h1> - Largest size, underlined. Ideal for title sections.
+<h2>H2 Title</h2> - 2nd largest, idea for key headers.
+<h3>H3 Title</h3> - Mid range text, all caps, underlined. Ideal for chapter/section names.
+<h4>H4 Title</h4>  - Smaller sub sections. 
+<h5>H5 Title</h5> -  Smallest section, mainly just to point something out. 
+   * Image: <img src="images/wowguidebook.png" style="display: block; max-width: 150px; margin: 15px auto; border: 1px solid #dac5a1; box-shadow: 0 4px 8px rgba(80, 59, 49, 0.15);">
+==========================================================================
+NOTICE 
+The first half of the sections are for basic single line information and quick details. Like saying Height is 5'9" or or Build is athletic. 
+The section starting at INFORMATION is the start of long form paragraphs that outline more in depth details. 
+SECTIONS CAN REMAIN BLANK and will just be left out in the final profile. Like 'mortal guise' or 'scale color' will work for a dragon character, but can be left blank for a non dragon and that section simply wont appear. 
+==========================================================================
+
+[IMAGE]
+
+
+[NAME]
+
+[PRONOUNCED]
+
+[ALIASES]
+
+[GENDER]
+ 
+[AGE] 
+
+[BIRTHPLACE]
+
+[SEXUALITY]
+
+[STATUS]
+
+[SPECIES]
+
+[GROWTH_STAGE] 
+
+[MORTAL_GUISE]
+
+[HEIGHT] 
+
+[BUILD]
+
+[SCALE_COLOR]
+
+[EYE] 
+
+[HAIR] 
+
+[SKIN_TONE]
+
+[FACTION] 
+
+[OCCUPATION]
+
+[LANGUAGE]
+
+
+[AFFILIATION]
+
+
+[VOICE]
+
+
+
+[INFORMATION]
+It looks like you were trying to access a character's narrative records without providing what character it is you wish to retrieve information on. 
+Mayhap you were looking into the records of <a href="?char=sandria" onclick="switchProfile(event, 'sandria')">Sandria</a> perhaps? Or <a href="?char=vega" onclick="switchProfile(event, 'vega')">Vega</a>? 
+Regardless as efficient as we are, we have not yet developed a means to read minds that don't involve some uncomfortable arcane extraction. So I would advice to return to the character archives before proceeding further.
+
+[HISTORY]
+
+
+
+[PERSONALITY]
+
+
+
+[ABILITIES]
+
+
+
+[RELATIONS]
+
+[NOTES]
