@@ -234,13 +234,21 @@ input[type="radio"] {
   position: sticky;
   top: 20px; 
 
-  .bio-image-wrapper img {  /* Character image to fit the space*/
+.bio-image-wrapper img {
     width: 100%;
+    aspect-ratio: 5 / 4;
     height: auto;
+    object-fit: contain;
+    object-position: center;
+    background-color: rgba(61, 37, 27, 0.10);
     border-radius: 4px;
     margin-bottom: 15px;
     border: 1px solid #503b30;
-  }
+    box-sizing: border-box;
+}
+
+
+
 
   .sidebar-tab-system {
     display: flex;
@@ -420,6 +428,14 @@ hr {
   color: #900b0b;
   border-bottom: 2px solid #900b0b;
 }
+
+
+/* Disable floating when the sidebar exceeds screen height */
+.sidebar-tabs.no-sticky {
+    position: static !important;
+    top: auto !important;
+}
+
 
 	</style>
 	
@@ -820,6 +836,52 @@ function loadFromAddressBar() {
 }
 window.addEventListener('popstate', loadFromAddressBar);
 window.addEventListener('DOMContentLoaded', loadFromAddressBar);
+
+
+
+
+
+
+/* Automatically disable sticky positioning if the sidebar
+   is taller than the available screen height. */
+
+const profileSidebar = document.querySelector('.sidebar-tabs');
+
+function updateSidebarSticky() {
+    if (!profileSidebar) return;
+
+    // Mobile already uses normal scrolling.
+    if (window.innerWidth <= 768) {
+        profileSidebar.classList.remove('no-sticky');
+        return;
+    }
+
+    // Leave 20px of breathing room above and below.
+    const availableHeight = window.innerHeight - 40;
+    const sidebarHeight = profileSidebar.offsetHeight;
+
+    profileSidebar.classList.toggle(
+        'no-sticky',
+        sidebarHeight > availableHeight
+    );
+}
+
+// React to browser resizing.
+window.addEventListener('resize', updateSidebarSticky);
+
+// React to sidebar content changing, including portrait loads,
+// switching between Identity / Appearance / Position,
+// and loading different character biographies.
+const sidebarObserver = new ResizeObserver(updateSidebarSticky);
+sidebarObserver.observe(profileSidebar);
+
+updateSidebarSticky();
+
+
+
+
+
+
 </script>
 
 
