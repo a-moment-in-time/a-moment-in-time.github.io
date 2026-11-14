@@ -1,5 +1,23 @@
-[IMAGE]
+
+
+[IMAGE_MAIN]
 portrait/Sandria.png
+
+[IMAGE_MAIN_LABEL]
+Visage
+[IMAGE_2]
+portrait/SandriaDrake.png
+[IMAGE_2_LABEL]
+True Form
+[IMAGE_3]
+
+[IMAGE_3_LABEL]
+
+[IMAGE_4]
+
+[IMAGE_4_LABEL]
+
+
 
 [NAME] Sandria (true form)
 
@@ -27,7 +45,7 @@ True age Unknown- Still says shes 28 if asked.
 
 [MORTAL_GUISE] Human, Blood Elf (as needed)
 
-[HEIGHT] 5’11” - Human Form | 8ft + - True Drake Form
+[HEIGHT] 5’11” - Visage | 8ft + - Drake Form
 
 [BUILD] Athletic Sleek
 
@@ -55,7 +73,7 @@ Independent
 (Partly) Red Dragonflight
 (Indirectly) Black Dragonflight
 
-[VOICE] <a href="https://www.youtube.com/watch?v=RxrTVf2vkLs">Amy Lee</a> (Voice Claim)
+[VOICE] <a href="https://www.youtube.com/watch?v=RxrTVf2vkLs">Amy Lee</a> 
 
 
 

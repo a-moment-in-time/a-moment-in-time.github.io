@@ -1,5 +1,24 @@
-[IMAGE]
+
+
+[IMAGE_MAIN]
 portrait/Ebben.png
+
+[IMAGE_MAIN_LABEL]
+
+[IMAGE_2]
+
+[IMAGE_2_LABEL]
+
+[IMAGE_3]
+
+[IMAGE_3_LABEL]
+
+[IMAGE_4]
+
+[IMAGE_4_LABEL]
+
+
+
 
 [NAME] Ebbyion (true form)
 
@@ -9,8 +28,8 @@ Eh-bee-ion
 Ebben Plesner (Human Guise)
 [GENDER]
 Male
-[AGE] 22 (as of <a href="https://warcraft.wiki.gg/wiki/Timeline#Battle_for_Azeroth" target="new">BFA</a>, year 34) 
-28 (as of <a href="https://warcraft.wiki.gg/wiki/Timeline#Dragonflight" target="new">Dragonflight</a>, Year 40)
+[AGE] 22 (as of <a href="https://warcraft.wiki.gg/wiki/Timeline#Battle_for_Azeroth" target="_blank" rel="noopener noreferrer">BFA</a>, year 34) 
+28 (as of <a href="https://warcraft.wiki.gg/wiki/Timeline#Dragonflight" target="_blank" rel="noopener noreferrer">Dragonflight</a>, Year 40)
 [BIRTHPLACE] Egg laid in Unknown Timeway
  'Hatched' in "End Time" Northrend
 
@@ -22,7 +41,7 @@ Male
 
 [GROWTH_STAGE] Drake (Young Adult)
 
-[MORTAL_GUISE] Human, Orc (as needed)
+[MORTAL_GUISE] Human, Troll (as needed)
 
 [HEIGHT] 5’3” - Human Form
 
@@ -30,7 +49,7 @@ Male
 
 [SCALE_COLOR]
 
-[EYE] Golden Brown (Human Form), Red (Drake)
+[EYE] Amber (Human Form), Red (Drake)
 
 [HAIR] Ashy Black
 
@@ -53,7 +72,7 @@ Independent
 (Partly) Red Dragonflight
 
 
-[VOICE] <a href="https://www.youtube.com/watch?v=NFUFD4yHgI4" target="new">Aaron Phillips</a>
+[VOICE] <a href="https://www.youtube.com/watch?v=NFUFD4yHgI4" target="_blank" rel="noopener noreferrer">Aaron Phillips</a> (Wrathion's Voice Actor)
 
 
 

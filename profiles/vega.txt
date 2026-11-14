@@ -27,8 +27,26 @@
 
 
 
-[IMAGE]
+
+[IMAGE_MAIN]
 portrait/default.png
+
+[IMAGE_MAIN_LABEL]
+
+[IMAGE_2]
+
+[IMAGE_2_LABEL]
+
+[IMAGE_3]
+
+[IMAGE_3_LABEL]
+
+[IMAGE_4]
+
+[IMAGE_4_LABEL]
+
+
+
 
 [NAME] Baelithan Stormweaver
 
