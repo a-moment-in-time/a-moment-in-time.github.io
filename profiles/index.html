@@ -302,11 +302,21 @@ background-color: rgba(61, 37, 27, 0.20);
     padding: 4px 0;
     border-bottom: 1px dashed #a08264;
     font-size: 0.95rem;
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Source Sans Pro', sans-serif; 
+    display: grid;
+    grid-template-columns: 100px minmax(0, 1fr);
+    column-gap: 10px;
+    align-items: start;
+    font-family: 'Source Sans Pro', sans-serif;
+
     strong {
-     color: #900b0b; 
+      color: #900b0b;
+    }
+
+    /* Values all begin at the same left edge, like a wiki infobox. */
+    > [id^="section-"] {
+      min-width: 0;
+      text-align: left;
+      overflow-wrap: anywhere;
     }
   }
   
@@ -321,6 +331,15 @@ hr {
   border-bottom-color: #1c1410;
 }
 
+
+
+/* Keep wiki-style detail rows aligned without squeezing small screens. */
+@media (max-width: 480px) {
+  .info-list li {
+    grid-template-columns: minmax(105px, 40%) minmax(0, 1fr);
+    column-gap: 8px;
+  }
+}
 
 /* ===================================================
    2. MOBILE BREAKPOINT HANDLING (Screens under 768px)
@@ -362,6 +381,44 @@ hr {
 }
 .profile-grid.no-sidebar .sidebar-tabs {
   display: none !important;
+}
+
+
+/* ===================================================
+   OPTIONAL PORTRAIT TABS (ABOVE CHARACTER IMAGE)
+   Displayed only when a profile supplies two or more images.
+   =================================================== */
+.portrait-form-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.portrait-form-tab {
+  flex: 1 1 auto;
+  padding: 6px 9px;
+  font-family: 'Alegreya SC', serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.15;
+  color: #503b31;
+  background: rgba(61, 37, 27, 0.15);
+  border: 1px solid rgba(80, 59, 49, 0.35);
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+}
+
+.portrait-form-tab:hover,
+.portrait-form-tab:focus-visible {
+  background: rgba(61, 37, 27, 0.30);
+  color: #1c1410;
+}
+
+.portrait-form-tab.is-active {
+  background: rgba(61, 37, 27, 0.06);
+  color: #900b0b;
+  border-bottom: 2px solid #900b0b;
 }
 
 	</style>
@@ -437,6 +494,8 @@ hr {
   <!-- ====== THE SIDE PANEL (SIDE TABS) ====== -->
   <aside class="sidebar-tabs">
     <div class="bio-image-wrapper">
+      <!-- Optional portrait buttons; hidden automatically for a single image. -->
+      <div id="portrait-form-tabs" class="portrait-form-tabs is-hidden" role="group" aria-label="Character portrait options"></div>
 	<img id="character-portrait" src="portrait/default.png" alt="Character portrait">
     </div>
 
@@ -516,6 +575,61 @@ hr {
 
 const MAIN_TABS = ['information', 'history', 'personality', 'abilities', 'relations', 'notes'];
 const SIDE_TABS = ['basics', 'looks', 'position'];
+
+// Four generic, optional portrait slots. Only supplied images create tabs.
+// Their labels come from each character's text file, with neutral fallbacks.
+// These can represent forms, outfits, ages, screenshots, or anything else.
+const PORTRAIT_IMAGE_FIELDS = [
+  ['image_main', 'image_main_label', 'Main'],
+  ['image_2', 'image_2_label', 'Image 2'],
+  ['image_3', 'image_3_label', 'Image 3'],
+  ['image_4', 'image_4_label', 'Image 4']
+];
+
+function displayPortraitForms(sections) {
+  const wrapper = document.querySelector('.bio-image-wrapper');
+  const tabs = document.getElementById('portrait-form-tabs');
+  const portrait = document.getElementById('character-portrait');
+  const images = PORTRAIT_IMAGE_FIELDS
+    .filter(([tag]) => hasContent(sections.get(tag)))
+    .map(([tag, labelTag, fallbackLabel]) => ({
+      label: hasContent(sections.get(labelTag))
+        ? sections.get(labelTag).trim().split(/\r?\n/)[0].trim()
+        : fallbackLabel,
+      src: sections.get(tag).trim()
+    }));
+
+  if (images.length === 0) return false;
+
+  function selectImage(index) {
+    const image = images[index];
+    portrait.src = image.src;
+    portrait.alt = image.label + ' character portrait';
+    tabs.querySelectorAll('button').forEach((button, buttonIndex) => {
+      const active = buttonIndex === index;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+  }
+
+  if (images.length > 1) {
+    images.forEach((image, index) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'portrait-form-tab';
+      button.textContent = image.label;
+      button.setAttribute('aria-pressed', 'false');
+      button.addEventListener('click', () => selectImage(index));
+      tabs.appendChild(button);
+    });
+    tabs.classList.remove('is-hidden');
+  }
+
+  selectImage(0);
+  wrapper.classList.remove('is-hidden');
+  return true;
+}
+
 const MISSING_CHRONICLE_NOTICE = document.getElementById('section-information').innerHTML;
 const EMPTY_INFORMATION_NOTICE = 'This character’s introductory information has not been written yet.';
 let profileLoadNumber = 0; // Prevents an older, slower request from replacing a newer one.
@@ -572,8 +686,13 @@ function resetProfileView() {
   for (const tab of SIDE_TABS) {
     setTabVisible(`side-tab-${tab}`, false);
   }
-  // The portrait won't be visible until a successful load supplies an image.
-  document.getElementById('character-portrait').removeAttribute('src');
+  // Clear form buttons and portrait when switching characters or when a file is missing.
+  const portraitTabs = document.getElementById('portrait-form-tabs');
+  portraitTabs.replaceChildren();
+  portraitTabs.classList.add('is-hidden');
+  const portrait = document.getElementById('character-portrait');
+  portrait.removeAttribute('src');
+  portrait.alt = 'Character portrait';
 }
 
 function showMissingChronicle() {
@@ -585,7 +704,7 @@ function showMissingChronicle() {
 function displayCharacter(sections) {
   // Sections is a Map of bracket names to text/HTML, e.g. NAME => Sandria.
   for (const [tag, content] of sections) {
-    if (tag === 'image') continue;
+    if (tag.startsWith('image_')) continue; // Image paths/labels are handled by displayPortraitForms().
     const field = tag.replace(/_/g, '-');
     const element = document.getElementById(`section-${field}`);
     if (element && hasContent(content)) {
@@ -640,15 +759,10 @@ function displayCharacter(sections) {
   }
   selectFirstAvailableSideTab();
 
-  // Keep the usual portrait if provided; otherwise show only the sidebar
-  // information (if any). Never show the old character's portrait.
-  const image = sections.get('image');
-  if (hasContent(image)) {
-    const portrait = document.getElementById('character-portrait');
-    portrait.src = image.trim();
-    document.querySelector('.bio-image-wrapper').classList.remove('is-hidden');
-  }
-  if (anySidebarDetails || hasContent(image)) {
+  // Show the first supplied portrait; only show form buttons for multiple images.
+  // Never reuse the previous character's portrait when switching profiles.
+  const hasPortrait = displayPortraitForms(sections);
+  if (anySidebarDetails || hasPortrait) {
     document.querySelector('.profile-grid').classList.remove('no-sidebar');
   }
 }
@@ -672,7 +786,7 @@ async function loadCharacter(characterName) {
     if (thisLoad !== profileLoadNumber) return;
 
     // Last occurrence wins, so even older profiles with instruction text work.
-    const chunks = fullText.split(/\[([A-Z_]+)\]/);
+    const chunks = fullText.split(/\[([A-Z0-9_]+)\]/);
     const sections = new Map();
     for (let index = 1; index < chunks.length; index += 2) {
       sections.set(chunks[index].toLowerCase(), (chunks[index + 1] || '').trim());
