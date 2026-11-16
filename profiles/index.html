@@ -501,9 +501,6 @@ hr {
   <!-- ====== THE MAIN BODY CONTENT (TOP TABS) ====== -->
   <main class="main-content-tabs">
   
-  
-  <main class="main-content-tabs">
-
   <!-- Return to previous page -->
   <button type="button"
           class="profile-back-bookmark"
@@ -945,7 +942,14 @@ updateSidebarSticky();
 
 
 
-
+/* Return to previous page or character */
+function goBackFromProfile() {
+    if (window.history.length > 1) {
+        window.history.back();
+    } else {
+        window.location.href = '../characters.html';
+    }
+}
 
 </script>
 
