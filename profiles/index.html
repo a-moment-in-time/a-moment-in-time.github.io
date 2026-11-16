@@ -437,6 +437,56 @@ hr {
 }
 
 
+
+
+
+
+/* Anchor bookmark to the main biography */
+.main-content-tabs {
+    position: relative;
+}
+
+/* Small red bookmark extending from the left */
+.profile-back-bookmark {
+    position: absolute;
+    left: -40px;
+    top: 65px;
+
+    width: 40px;
+    height: 45px;
+
+    background: #900b0b;
+    color: #fdf1dc;
+    border: 1px solid #503b30;
+    border-radius: 6px 0 0 6px;
+
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: -3px 3px 6px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+.profile-back-bookmark:hover,
+.profile-back-bookmark:focus-visible {
+    background: #b52222;
+}
+
+/* Small screens: keep the bookmark accessible */
+@media (max-width: 768px) {
+    .profile-back-bookmark {
+        position: fixed;
+        left: 0;
+        top: 100px;
+        width: 32px;
+        height: 42px;
+        border-radius: 0 6px 6px 0;
+    }
+}
+
+
+
+
+
 	</style>
 	
 	
@@ -450,6 +500,21 @@ hr {
   
   <!-- ====== THE MAIN BODY CONTENT (TOP TABS) ====== -->
   <main class="main-content-tabs">
+  
+  
+  <main class="main-content-tabs">
+
+  <!-- Return to previous page -->
+  <button type="button"
+          class="profile-back-bookmark"
+          onclick="goBackFromProfile()"
+          title="Go back"
+          aria-label="Go back">
+    <span aria-hidden="true">←</span>
+  </button>
+  
+  
+  
     <!-- Tab Info -->
     <input type="radio" id="main-tab-info" name="main-sections" checked>
     <label for="main-tab-info" class="top-tab-btn">Information</label>
