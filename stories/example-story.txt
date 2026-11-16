@@ -24,8 +24,14 @@ An imaginary archive (not a canonical Warcraft location)
 
 [AO3]
 
+[NOTE]
+<b>Story note:</b> This is a simple demonstration of the story reader. No characters or events here are canon.
+
 [CHAPTER_1_TITLE]
 The Sealed Ledger
+
+[CHAPTER_1_NOTE]
+An author note can appear before a chapter. This one is here to show the layout.
 
 [CHAPTER_1]
 The archivist had put up a sign on the library door. It read: <i>PLEASE DO NOT DISTURB THE CHRONICLES.</i>
@@ -34,8 +40,13 @@ Naturally, the very next visitor knocked three times and asked if the chronicles
 
 "Only if you promise to put them back in chronological order," the archivist replied.
 
+[CHAPTER_1_END_NOTE]
+Thanks for reading Chapter 1! End notes show beneath the story text.
+
 [CHAPTER_2_TITLE]
 A Page Out of Order
+
+[CHAPTER_2_NOTE]
 
 [CHAPTER_2]
 The second chapter appeared with hardly any effort. No one had to make a new webpage, and nobody was forced to count how many chapters the library might hold.
@@ -44,10 +55,17 @@ The second chapter appeared with hardly any effort. No one had to make a new web
 
 "Of course. You can even share the <b>chapter's own URL</b>," the archivist said, looking very pleased with the new system.
 
+[CHAPTER_2_END_NOTE]
+
 [CHAPTER_3_TITLE]
 The End of the Test
+
+[CHAPTER_3_NOTE]
 
 [CHAPTER_3]
 One final page slid neatly into the ledger. The previous and next buttons knew exactly where it belonged.
 
 And with that, the archivist declared the test complete — though everyone knew better than to call a website <i>final</i>.
+
+[CHAPTER_3_END_NOTE]
+<b>Development update:</b> This demo is complete. In a real story, this space could contain a hiatus or progress note.

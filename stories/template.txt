@@ -19,6 +19,16 @@ Add [CHAPTER_3_TITLE] and [CHAPTER_3] for chapter 3, then chapter 4, etc.
 There is NO need to update the HTML or JavaScript. A chapter shows up only
 when its [CHAPTER_NUMBER] text is not blank. Chapter titles are optional.
 To preserve existing links, keep published chapter numbers stable.
+To add another chapter, copy its TITLE, NOTE, CHAPTER and END_NOTE fields
+and change the number; only the [CHAPTER_N] body is required.
+
+OPTIONAL AUTHOR NOTES:
+[NOTE] appears below the story information, before chapter navigation.
+[CHAPTER_1_NOTE] appears at the start of chapter 1 (after its title).
+[CHAPTER_1_END_NOTE] appears at the end of chapter 1, before navigation.
+Replace the number for each chapter, e.g. [CHAPTER_17_END_NOTE].
+All notes are optional. Blank ones are completely hidden. Use them for
+writing updates, hiatus notices, chapter context, or author comments.
 
 RATING SUGGESTIONS (type whichever applies):
 General Audiences / Teen / Mature / Explicit / Not Rated
@@ -51,18 +61,27 @@ A short introduction to the story.
 
 [AO3]
 
+[NOTE]
+
 [CHAPTER_1_TITLE]
 Your First Chapter Title
+
+[CHAPTER_1_NOTE]
 
 [CHAPTER_1]
 Your first chapter starts here.
 
 Leave a blank line between paragraphs, like this.
 
+[CHAPTER_1_END_NOTE]
+
 [CHAPTER_2_TITLE]
 Your Second Chapter Title
+
+[CHAPTER_2_NOTE]
 
 [CHAPTER_2]
 Your second chapter starts here.
 
-To add another chapter, copy the two chapter fields and replace the 2 with 3.
+[CHAPTER_2_END_NOTE]
+
