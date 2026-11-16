@@ -1,5 +1,31 @@
-[ 
-This is a ‘What If’ concept planning and notes that has been made cannon. It started after Ebbyion was created as a character, (he was called Ebyion/Eben back then, I took the time to correct the spelling throughout this to avoid confusion) back during the Pandaria expansion (2013). 
+[TITLE]
+Pandaria 'WHAT IF' Concept Draft
+
+[AUTHOR]
+A Moment in Time — Demonstration
+
+[SUMMARY]
+A short, entirely fictional test story to demonstrate the new reader. This is <b>not established group canon</b>.
+
+[RATING]
+Teen
+
+[WARNINGS]
+Mild fantasy peril (test metadata only)
+
+[GENRE]
+Fantasy, Humor
+
+[STATUS]
+Complete — Demo
+
+[SETTING]
+An imaginary archive (not a canonical Warcraft location)
+
+[AO3]
+
+[NOTE]
+<b>Story note:</b>  This is a ‘What If’ concept planning and notes that has been made cannon. It started after Ebbyion was created as a character, (he was called Ebyion/Eben back then, I took the time to correct the spelling throughout this to avoid confusion) back during the Pandaria expansion (2013). 
 
 Ebben first came into existence as a thought from another friend Jordan, who loved Wrathion (and the one who developed our story lines around the infinite flight) came up with the idea of "What if the Infinite had captured Wrathion from the timeline?" that ended up evolving into "What if the Infinite stole his egg from another timeline with the plans to twist that version of him into another Deathwing to use as a weapon against the time-ways?"
 
@@ -23,11 +49,15 @@ The expansion took place year 30 in the Timeline: https://warcraft.wiki.gg/wiki/
 Also notes for Wrathion’s quest line that would be taking place at the same time: https://warcraft.wiki.gg/wiki/A_Legend_in_the_Making
 ------------
 It is to note in this time period, even in game Wrathion is a whelp of 2 years in age, but is around 16 in age human equivalent. Reference: https://warcraft.wiki.gg/wiki/Secrets_of_the_First_Empire
-Wrathions voice actor also described him as a ‘teenager with daddy issues’. Fitting. ]
-----------------------------------------
+Wrathions voice actor also described him as a ‘teenager with daddy issues’. Fitting. 
+
+
+
+[CHAPTER_1_TITLE]
 
 Summery of how they got there.
------
+
+[CHAPTER_1]
 The Cataclysm started, Deathwing emerged and started his reign of terror across the world. As time went on and heros began to confront the threat, word of a ‘black prince’ and his agents under him meticulously culling members of the black flight would start spreading around. Reaching Maetel and Ebben as they try to lend aid where they can in a world that has drastically changed.
 
 The concern that Ebben could be discovered and be on the hit-list started to grow as word grew, nearly all the black dragons were gone and the few remaining were being hunted down as they went into hiding. This culling was very efficient.
@@ -39,11 +69,15 @@ They would be there for a time, eventually be discovered, and welcomed as visito
 Then the events of the Pandaria expansion start, with the ships holding the ‘white pawn’ Anduin crashing into the island still covered in mist, with the horde, doing much the same with their air ships.
 
 This brings the alliance and horde to Pandaira and the conflict resumes much to Maetel and Ebben’s annoyance… They continue to try and stay out of the conflicts.
--------------------
+
+
+[CHAPTER_2_TITLE]
+The events planned
+
+[CHAPTER_2_NOTE]
 Time frame:  Somewhere in the middle of the expansion, Landfall patch. Lion’s Landing is established in the south, 2 months after the first ships crashed onto the land. Anduin is recovering in the tavern in the mist after being crushed by the Divine Bell Garrosh had tried to use to control the sha before the teen got in the way (quest ref: https://warcraft.wiki.gg/wiki/Breath_of_Darkest_Shadow ) , 
----------------------
 
-
+[CHAPTER_2]
 Maetel and Ebben are traveling through a marketplace, things have gotten a bit more chaotic sense the alliance and horde have started their squabbles in these lands but they are still trying to make the best of it.
 
 Suddenly Ebben is grabbed by the shoulder and he spins around, a Black Talon agent had seen him and addressed him as ‘your majesty’ and started saying more before pausing, seeing Ebben and the stunned/startled expression on his face. The agent stares then mutters ‘your not him’ before moving off and vanishing. That was unsettling as hell to Ebben and Mae and they stick closer together, opting to move on.
@@ -132,15 +166,17 @@ They headed out, unaware they had been watched by Wrathion who grumbled, hating 
 
 Wrathion scoffs, but opts to head outside the tavern to watch the siblings leave only… there nowhere in sight. Odd, they couldn’t have gotten that far already, the mist wasn’t even that thick but he saw them nowhere. Wrathion growled… the hell. 
 
----------------------
+[CHAPTER_3_TITLE]
+Timeless Isle event
 
+[CHAPTER_3_NOTE]
 Some time later, The Timeless Isle has appeared off the Jade Forests costs, the land an enigma where time has no meaning. The time of day is locked in a never ending sunset as if time is locked, and yet not as the creatures of these lands still move and live. 
 (Ref: https://warcraft.wiki.gg/wiki/Timeless_Isle )
 
 Adventurers and natives alike have already ventured forth to this island to check it out, along with the Bronze Dragonflight, one such being Kairozdormu (Kairoz). Working on the Vision of Time.
 (Ref: https://warcraft.wiki.gg/wiki/Kairozdormu )
+[CHAPTER_3]
 
-----------------------
 
 Maetel, hearing about this island effected by time would be highly curious about it, wanting to see it for herself. Ebben would have his own curiosity’s about it, and would agree to come along. Mae would fly him out as her true form, landing along the islands edge before shifting to her mortal form for them to start exploring the lands.
 
@@ -362,7 +398,10 @@ Kairoz would be a little confused… Wrathion would state that Chromie helped cl
 
 Kairozdormu wouldn’t be pleased by this… even Wrathion could tell now that he had been planning something… what he wasn’t sure but there was more important matters he needed to focus on. 
 
----------
+[CHAPTER_4_TITLE]
+Their choice
+
+[CHAPTER_3]
 
 Mae and Ebben would… try and enjoy the rest of their time on the timeless isle, but the joy they had felt first arriving had been lost, and with Kairozdormu still roaming around it also felt less safe. Plus Ebben was feeling like he was being watched again making Mae sigh… and opt for them to leave.
 
@@ -378,6 +417,6 @@ To the black talon agent, he had spotted them down the path away, and was moving
 
 Wrathion wouldn’t be happy… but also would know how they managed to elude them. Keeping track of a bronze dragon would not be easy.
 
--------------------
+[CHAPTER_4_END_NOTE]
 
 [And that is where we left off. Later after this we liked the idea of Ebben being with Mae that we opted to flush his character out even more, and wanted to make this cannon. But to avoid ret-coning a LOT of Mae’s history to keep Ebben by her side, this is where we opted to re-write part of it to have her be pulled back into the past, and yes we planed for it to have been Kairozdormu who did it. Working with his alternate self to claim her and drag her back to end time. This allowed her to re-live her time, and to then include Ebben in her life and ongoing stories with them escaping end time together.]
