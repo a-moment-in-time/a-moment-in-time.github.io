@@ -1,0 +1,53 @@
+[TITLE]
+The Archivist's Test (Demo Story)
+
+[AUTHOR]
+A Moment in Time — Demonstration
+
+[SUMMARY]
+A short, entirely fictional test story to demonstrate the new reader. This is <b>not established group canon</b>.
+
+[RATING]
+Teen
+
+[WARNINGS]
+Mild fantasy peril (test metadata only)
+
+[GENRE]
+Fantasy, Humor
+
+[STATUS]
+Complete — Demo
+
+[SETTING]
+An imaginary archive (not a canonical Warcraft location)
+
+[AO3]
+
+[CHAPTER_1_TITLE]
+The Sealed Ledger
+
+[CHAPTER_1]
+The archivist had put up a sign on the library door. It read: <i>PLEASE DO NOT DISTURB THE CHRONICLES.</i>
+
+Naturally, the very next visitor knocked three times and asked if the chronicles could be disturbed just a little.
+
+"Only if you promise to put them back in chronological order," the archivist replied.
+
+[CHAPTER_2_TITLE]
+A Page Out of Order
+
+[CHAPTER_2]
+The second chapter appeared with hardly any effort. No one had to make a new webpage, and nobody was forced to count how many chapters the library might hold.
+
+"Can I skip directly to the next chapter?" the visitor asked.
+
+"Of course. You can even share the <b>chapter's own URL</b>," the archivist said, looking very pleased with the new system.
+
+[CHAPTER_3_TITLE]
+The End of the Test
+
+[CHAPTER_3]
+One final page slid neatly into the ledger. The previous and next buttons knew exactly where it belonged.
+
+And with that, the archivist declared the test complete — though everyone knew better than to call a website <i>final</i>.

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Moment in Time — Stories</title>
+  <!-- Keep the existing website theme. This file lives in /stories/. -->
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* =========================================================
+       SHARED STORY READER — A Moment in Time
+       One HTML page loads /stories/<story-name>.txt.
+       ========================================================= */
+    .story-page {
+      width: min(1040px, calc(100% - 32px));
+      margin: 32px auto 72px;
+    }
+
+    .story-return {
+      display: inline-block;
+      color: #900b0b;
+      font-family: 'Alegreya SC', Georgia, serif;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 14px;
+      padding: 6px 2px;
+      text-decoration: none;
+    }
+    .story-return:hover,
+    .story-return:focus-visible { color: #b52222; }
+
+    .story-card {
+      background: rgba(61, 37, 27, 0.10);
+      border: 1px solid rgba(80, 59, 49, 0.22);
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.22);
+      padding: clamp(18px, 4vw, 38px);
+      margin-bottom: 22px;
+    }
+
+    .story-title {
+      font-family: 'Alegreya SC', Georgia, serif;
+      font-size: clamp(29px, 4.2vw, 43px);
+      color: #900b0b;
+      line-height: 1.15;
+      margin: 0 0 6px;
+    }
+    .story-subtitle {
+      margin: 0 0 14px;
+      font-size: 15px;
+      color: #503b30;
+    }
+
+    .story-metadata {
+      display: grid;
+      grid-template-columns: 104px minmax(0, 1fr);
+      column-gap: 14px;
+      row-gap: 10px;
+      margin: 18px 0 0;
+    }
+    .story-metadata dt {
+      color: #900b0b;
+      font-weight: bold;
+      margin: 0;
+    }
+    .story-metadata dd {
+      margin: 0;
+      min-width: 0;
+      overflow-wrap: anywhere;
+      white-space: pre-line;
+    }
+    .story-metadata a { color: #900b0b; }
+    .story-metadata a:hover { color: #b52222; }
+    .story-summary {
+      white-space: pre-wrap;
+      line-height: 1.65;
+    }
+
+    .chapter-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .chapter-nav-top {
+      padding: 14px 18px;
+      border-radius: 7px;
+      background: rgba(61, 37, 27, 0.13);
+      border: 1px solid rgba(80, 59, 49, 0.2);
+      margin-bottom: 16px;
+    }
+    .chapter-picker-label {
+      color: #900b0b;
+      font-family: 'Alegreya SC', Georgia, serif;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    .chapter-picker {
+      min-width: 0;
+      width: min(540px, 100%);
+      flex: 1 1 210px;
+      padding: 9px 12px;
+      color: #503b30;
+      background: #f9edda;
+      border: 1px solid #a08264;
+      border-radius: 5px;
+      font: 16px 'Source Sans Pro', sans-serif;
+      cursor: pointer;
+    }
+    .chapter-counter { font-size: 14px; color: #503b30; white-space: nowrap; }
+
+    .chapter-heading {
+      font-family: 'Alegreya', Georgia, serif;
+      color: #900b0b;
+      font-size: clamp(26px, 3.8vw, 34px);
+      margin: 2px 0 16px;
+      border-bottom: 1px solid #a08264;
+      padding-bottom: 8px;
+      text-transform: none;
+      scroll-margin-top: 20px;
+    }
+    .chapter-eyebrow {
+      display: block;
+      color: #6e5948;
+      font-family: 'Alegreya SC', Georgia, serif;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .chapter-body {
+      max-width: 78ch;
+      font-family: 'Source Sans Pro', sans-serif;
+      color: #3c2b24;
+      font-size: 18px;
+      line-height: 1.8;
+      white-space: pre-wrap;
+      overflow-wrap: break-word;
+      margin: 0 auto 26px;
+    }
+    .chapter-body p { margin: 0 0 1.1em; }
+    .chapter-body h3, .chapter-body h4 { margin: 15px 0 4px; }
+    .chapter-body a { color: #900b0b; }
+    .chapter-body img { max-width: 100%; height: auto; }
+
+    .chapter-nav-bottom {
+      border-top: 1px solid #a08264;
+      padding-top: 20px;
+      margin-top: 24px;
+    }
+    .chapter-button {
+      background: rgba(61, 37, 27, 0.14);
+      border: 1px solid #a08264;
+      border-radius: 5px;
+      color: #503b30;
+      font: bold 16px 'Alegreya SC', Georgia, serif;
+      cursor: pointer;
+      padding: 10px 15px;
+      min-height: 42px;
+    }
+    .chapter-button:hover,
+    .chapter-button:focus-visible {
+      color: #900b0b;
+      background: rgba(61, 37, 27, 0.25);
+    }
+    .chapter-button:disabled {
+      opacity: .4;
+      cursor: default;
+    }
+    .reader-notice {
+      font-family: 'Source Sans Pro', sans-serif;
+      line-height: 1.7;
+    }
+    .reader-notice a { color: #900b0b; }
+    .is-hidden { display: none !important; }
+
+    @media (max-width: 600px) {
+      .story-page { width: calc(100% - 20px); margin-top: 15px; }
+      .story-metadata { grid-template-columns: 90px minmax(0, 1fr); column-gap: 9px; }
+      .chapter-body { font-size: 17px; }
+      .chapter-nav-top { align-items: stretch; }
+      .chapter-picker { width: 100%; flex-basis: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="story-page">
+    <a class="story-return" href="../index.html">← Return to World Codex</a>
+
+    <section id="story-header" class="story-card is-hidden" aria-label="Story information">
+      <h1 id="story-title" class="story-title"></h1>
+      <p id="story-authors" class="story-subtitle is-hidden"></p>
+      <dl id="story-metadata" class="story-metadata"></dl>
+    </section>
+
+    <div id="reader-notice" class="story-card reader-notice" role="status">
+      Opening story chronicle…
+    </div>
+
+    <section id="reader-area" class="is-hidden" aria-label="Story chapter">
+      <nav id="chapter-nav-top" class="chapter-nav chapter-nav-top" aria-label="Choose a chapter">
+        <label class="chapter-picker-label" for="chapter-picker">Chapter</label>
+        <select id="chapter-picker" class="chapter-picker"></select>
+        <span id="chapter-count-top" class="chapter-counter"></span>
+      </nav>
+
+      <article class="story-card" id="chapter-card">
+        <span id="chapter-eyebrow" class="chapter-eyebrow"></span>
+        <h2 id="chapter-heading" class="chapter-heading"></h2>
+        <div id="chapter-body" class="chapter-body"></div>
+
+        <nav id="chapter-nav-bottom" class="chapter-nav chapter-nav-bottom" aria-label="Adjacent chapters">
+          <button type="button" id="chapter-previous" class="chapter-button">← Previous Chapter</button>
+          <span id="chapter-count-bottom" class="chapter-counter"></span>
+          <button type="button" id="chapter-next" class="chapter-button">Next Chapter →</button>
+        </nav>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    /* =========================================================
+       DYNAMIC STORY LOADER — one text file for the whole story.
+       Any numbered [CHAPTER_N] with content is discovered; no limit.
+       ========================================================= */
+    const STORY_FIELDS = [
+      ['rating', 'Rating'],
+      ['warnings', 'Warnings'],
+      ['genre', 'Genre'],
+      ['status', 'Status'],
+      ['setting', 'Setting'],
+      ['summary', 'Summary'],
+      ['ao3', 'Read on AO3']
+    ];
+
+    let loadedStory = null;
+    let loadedStoryId = null;
+
+    function hasContent(value) {
+      const text = String(value || '').trim();
+      return text !== '' && !/^(none|n\/a)$/i.test(text);
+    }
+
+    // Exactly like the character bios: uppercase [FIELD] markers,
+    // with numbers allowed in fields such as [CHAPTER_28].
+    function parseSections(text) {
+      const chunks = text.split(/\[([A-Z0-9_]+)\]/);
+      const sections = new Map();
+      for (let i = 1; i < chunks.length; i += 2) {
+        sections.set(chunks[i].toLowerCase(), (chunks[i + 1] || '').trim());
+      }
+      return sections;
+    }
+
+    function buildChapters(sections) {
+      const chapters = [];
+      for (const [key, body] of sections) {
+        const match = /^chapter_(\d+)$/.exec(key);
+        if (!match || !hasContent(body)) continue;
+        const number = Number(match[1]);
+        if (!Number.isSafeInteger(number) || number < 1) continue;
+        const name = sections.get(`chapter_${number}_title`);
+        chapters.push({
+          number,
+          title: hasContent(name) ? name.trim().split(/\r?\n/)[0] : `Chapter ${number}`,
+          body
+        });
+      }
+      chapters.sort((a, b) => a.number - b.number);
+      return chapters;
+    }
+
+    function showNotice(message, includeExample = false) {
+      document.getElementById('reader-area').classList.add('is-hidden');
+      document.getElementById('story-header').classList.add('is-hidden');
+      const notice = document.getElementById('reader-notice');
+      notice.replaceChildren(document.createTextNode(message));
+      if (includeExample) {
+        const example = document.createElement('a');
+        example.href = '?story=example-story';
+        example.textContent = 'Open the example story';
+        notice.appendChild(document.createElement('br'));
+        notice.appendChild(example);
+      }
+      notice.classList.remove('is-hidden');
+    }
+
+    // Story files are controlled by the group's authors, like the bio files.
+    // This keeps their optional simple HTML formatting (b, i, links, etc.).
+    // Only publish trusted, reviewed .txt files, as HTML inside them is parsed.
+    function setFormattedContent(element, value) {
+      element.innerHTML = value;
+    }
+
+    function renderStoryHeader(sections) {
+      const title = sections.get('title').trim();
+      document.getElementById('story-title').textContent = title;
+      document.title = `${title} — A Moment in Time`;
+      const author = sections.get('author');
+      const authorElement = document.getElementById('story-authors');
+      authorElement.classList.toggle('is-hidden', !hasContent(author));
+      authorElement.textContent = hasContent(author) ? `By ${author}` : '';
+
+      const metadata = document.getElementById('story-metadata');
+      metadata.replaceChildren();
+      for (const [field, label] of STORY_FIELDS) {
+        const value = sections.get(field);
+        if (!hasContent(value)) continue;
+
+        const dt = document.createElement('dt');
+        const dd = document.createElement('dd');
+        dt.textContent = label;
+
+        if (field === 'ao3') {
+          try {
+            const url = new URL(value.trim());
+            if (!['https:', 'http:'].includes(url.protocol)) continue;
+            const link = document.createElement('a');
+            link.href = url.href;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            link.textContent = 'Archive of Our Own';
+            dd.appendChild(link);
+          } catch { continue; }
+        } else if (field === 'summary') {
+          dd.classList.add('story-summary');
+          setFormattedContent(dd, value);
+        } else {
+          dd.textContent = value;
+        }
+        metadata.append(dt, dd);
+      }
+      metadata.classList.toggle('is-hidden', metadata.childElementCount === 0);
+      document.getElementById('story-header').classList.remove('is-hidden');
+    }
+
+    function chapterLabel(chapter) {
+      return chapter.title === `Chapter ${chapter.number}`
+        ? chapter.title
+        : `Chapter ${chapter.number}: ${chapter.title}`;
+    }
+
+    function fillChapterPicker(chapters) {
+      const picker = document.getElementById('chapter-picker');
+      picker.replaceChildren();
+      chapters.forEach(chapter => {
+        const option = document.createElement('option');
+        option.value = String(chapter.number);
+        option.textContent = chapterLabel(chapter);
+        picker.appendChild(option);
+      });
+      // With one chapter there's nothing to navigate to.
+      document.getElementById('chapter-nav-top').classList.toggle('is-hidden', chapters.length < 2);
+      document.getElementById('chapter-nav-bottom').classList.toggle('is-hidden', chapters.length < 2);
+    }
+
+    function requestedChapter() {
+      return new URLSearchParams(window.location.search).get('chapter');
+    }
+
+    function displayChapter(number, moveToChapter = false) {
+      if (!loadedStory) return;
+      const chapters = loadedStory.chapters;
+      const index = chapters.findIndex(chapter => chapter.number === Number(number));
+      const position = index < 0 ? 0 : index;
+      const chapter = chapters[position];
+      document.getElementById('chapter-picker').value = String(chapter.number);
+      document.getElementById('chapter-eyebrow').textContent = `Chapter ${chapter.number}`;
+      document.getElementById('chapter-heading').textContent = chapter.title;
+      setFormattedContent(document.getElementById('chapter-body'), chapter.body);
+      const counter = `${position + 1} of ${chapters.length}`;
+      document.getElementById('chapter-count-top').textContent = counter;
+      document.getElementById('chapter-count-bottom').textContent = counter;
+      document.getElementById('chapter-previous').disabled = position === 0;
+      document.getElementById('chapter-next').disabled = position === chapters.length - 1;
+      document.getElementById('reader-area').classList.remove('is-hidden');
+
+      if (moveToChapter) {
+        document.getElementById('chapter-card').scrollIntoView({ behavior: 'auto', block: 'start' });
+      }
+    }
+
+    // Make a new entry in browser history so Back / Forward work per chapter.
+    function navigateChapter(number) {
+      if (!loadedStory) return;
+      const url = new URL(window.location.href);
+      if (url.searchParams.get('chapter') === String(number)) return;
+      url.searchParams.set('chapter', String(number));
+      window.history.pushState({ story: loadedStoryId, chapter: number }, '', url);
+      displayChapter(number, true);
+    }
+
+    function setupChapterControls() {
+      document.getElementById('chapter-picker').addEventListener('change', event => {
+        navigateChapter(Number(event.target.value));
+      });
+      document.getElementById('chapter-previous').addEventListener('click', () => {
+        if (!loadedStory) return;
+        const chapter = Number(document.getElementById('chapter-picker').value);
+        const index = loadedStory.chapters.findIndex(item => item.number === chapter);
+        if (index > 0) navigateChapter(loadedStory.chapters[index - 1].number);
+      });
+      document.getElementById('chapter-next').addEventListener('click', () => {
+        if (!loadedStory) return;
+        const chapter = Number(document.getElementById('chapter-picker').value);
+        const index = loadedStory.chapters.findIndex(item => item.number === chapter);
+        if (index >= 0 && index < loadedStory.chapters.length - 1) {
+          navigateChapter(loadedStory.chapters[index + 1].number);
+        }
+      });
+    }
+
+    async function loadStoryFromAddressBar() {
+      const slug = new URLSearchParams(window.location.search).get('story') || '';
+      if (!/^[a-z0-9_-]+$/.test(slug)) {
+        loadedStory = null;
+        loadedStoryId = null;
+        showNotice('No story selected. Open a story link to begin reading.', true);
+        return;
+      }
+
+      // Switching chapters within this story needs no additional download.
+      if (slug === loadedStoryId && loadedStory) {
+        displayChapter(requestedChapter(), true);
+        return;
+      }
+
+      showNotice('Opening story chronicle…');
+      loadedStory = null;
+      loadedStoryId = null;
+      try {
+        const response = await fetch(`${encodeURIComponent(slug)}.txt`);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const text = await response.text();
+        const sections = parseSections(text);
+        const chapters = buildChapters(sections);
+        if (!hasContent(sections.get('title')) || chapters.length === 0) {
+          throw new Error('Missing title or chapters');
+        }
+        loadedStory = { sections, chapters };
+        loadedStoryId = slug;
+        renderStoryHeader(sections);
+        fillChapterPicker(chapters);
+        document.getElementById('reader-notice').classList.add('is-hidden');
+        displayChapter(requestedChapter());
+      } catch (error) {
+        console.warn('Unable to load story:', error);
+        showNotice('This story is not available yet, or its text file could not be read.');
+      }
+    }
+
+    setupChapterControls();
+    window.addEventListener('popstate', loadStoryFromAddressBar);
+    loadStoryFromAddressBar();
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+A MOMENT IN TIME — STORY TEXT TEMPLATE
+======================================
+Keep the bracketed field names as written. The text immediately BELOW each
+field belongs to it, up until the next bracketed field. Blank optional
+fields are hidden on the story page.
+
+Authors can type their stories normally, leaving a blank line between
+paragraphs. Simple HTML such as <b>bold</b>, <i>italics</i>, and
+<a href="https://example.com">links</a> is supported, just like the bios.
+Only paste HTML you trust into a story file.
+
+The story page reads: stories/index.html?story=your-filename
+Example: stories/index.html?story=example-story&chapter=2
+The filename is lowercase letters, numbers, underscores or hyphens;
+no .txt in the URL.
+
+CHAPTERS ARE AUTOMATIC — NO LIMIT:
+Add [CHAPTER_3_TITLE] and [CHAPTER_3] for chapter 3, then chapter 4, etc.
+There is NO need to update the HTML or JavaScript. A chapter shows up only
+when its [CHAPTER_NUMBER] text is not blank. Chapter titles are optional.
+To preserve existing links, keep published chapter numbers stable.
+
+RATING SUGGESTIONS (type whichever applies):
+General Audiences / Teen / Mature / Explicit / Not Rated
+Warnings are free text, not a required choice from a fixed list.
+An empty warning field means no warnings were supplied — it is NOT an
+assurance that the work contains no potentially upsetting content.
+
+Do not place text inside a [FIELD] as a prompt unless you want it
+published! Replace the example filler below with your actual content.
+======================================
+
+[TITLE]
+Your Story Title
+
+[AUTHOR]
+Author Name (or multiple names)
+
+[SUMMARY]
+A short introduction to the story.
+
+[RATING]
+
+[WARNINGS]
+
+[GENRE]
+
+[STATUS]
+
+[SETTING]
+
+[AO3]
+
+[CHAPTER_1_TITLE]
+Your First Chapter Title
+
+[CHAPTER_1]
+Your first chapter starts here.
+
+Leave a blank line between paragraphs, like this.
+
+[CHAPTER_2_TITLE]
+Your Second Chapter Title
+
+[CHAPTER_2]
+Your second chapter starts here.
+
+To add another chapter, copy the two chapter fields and replace the 2 with 3.
