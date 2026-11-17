@@ -157,6 +157,35 @@
       line-height: 1.6;
       overflow-wrap: anywhere;
     }
+
+    /* Only the general story note collapses. Chapter notes stay open. */
+    .story-note-collapsible { padding: 0; }
+    .story-note-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 16px;
+      color: #900b0b;
+      font-family: 'Alegreya SC', Georgia, serif;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      list-style: none;
+    }
+    .story-note-toggle::-webkit-details-marker { display: none; }
+    .story-note-toggle::after {
+      content: "Show ▾";
+      font: 600 13px 'Source Sans Pro', sans-serif;
+      color: #503b30;
+    }
+    .story-note-collapsible[open] .story-note-toggle::after { content: "Hide ▴"; }
+    .story-note-toggle:hover { background: rgba(144, 11, 11, 0.045); }
+    .story-note-toggle:focus-visible {
+      outline: 2px solid #900b0b;
+      outline-offset: -2px;
+    }
+    .story-note-expanded { padding: 0 16px 14px; }
     .story-note-heading {
       font-family: 'Alegreya SC', Georgia, serif;
       color: #900b0b;
@@ -244,6 +273,9 @@
       .story-metadata dt:not(:first-child) { margin-top: 8px; }
       .story-summary { line-height: 1.4; }
       .story-note { padding: 10px 12px; margin: 12px 0; }
+      .story-note-collapsible { padding: 0; }
+      .story-note-toggle { padding: 10px 12px; }
+      .story-note-expanded { padding: 0 12px 12px; }
       .chapter-nav-top {
         padding: 8px 10px;
         margin-bottom: 8px;
@@ -300,10 +332,10 @@
       <h1 id="story-title" class="story-title"></h1>
       <p id="story-authors" class="story-subtitle is-hidden"></p>
       <dl id="story-metadata" class="story-metadata"></dl>
-      <aside id="story-note" class="story-note is-hidden" aria-label="Story note">
-        <div class="story-note-heading">Story Note</div>
-        <div id="story-note-text" class="story-note-text"></div>
-      </aside>
+      <details id="story-note" class="story-note story-note-collapsible is-hidden">
+        <summary class="story-note-toggle">Story Note</summary>
+        <div id="story-note-text" class="story-note-text story-note-expanded"></div>
+      </details>
     </section>
 
     <div id="reader-notice" class="story-card reader-notice" role="status">
@@ -465,6 +497,7 @@
         metadata.append(dt, dd);
       }
       metadata.classList.toggle('is-hidden', metadata.childElementCount === 0);
+      document.getElementById('story-note').open = false;
       displayOptionalNote('story-note', 'story-note-text', sections.get('note'));
       document.getElementById('story-header').classList.remove('is-hidden');
     }
