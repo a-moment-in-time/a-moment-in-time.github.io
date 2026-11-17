@@ -129,14 +129,16 @@
       margin-bottom: 4px;
     }
     .chapter-body {
-      max-width: 102ch;
+      width: 100%;
+      max-width: none;
+      box-sizing: border-box;
       font-family: 'Source Sans Pro', sans-serif;
       color: #3c2b24;
-      font-size: 18px;
-      line-height: 1.8;
+      font-size: 16px;
+      line-height: 1.2;
       white-space: pre-wrap;
-      overflow-wrap: break-word;
-      margin: 0 auto 26px;
+      overflow-wrap: anywhere;
+      margin: 0 0 26px;
     }
     .chapter-body p { margin: 0 0 1.1em; }
     .chapter-body h3, .chapter-body h4 { margin: 15px 0 4px; }
@@ -168,7 +170,7 @@
     .story-note-text a { color: #900b0b; }
     .story-note-text img { max-width: 100%; height: auto; }
     .chapter-note,
-    .chapter-end-note { max-width: 102ch; margin-left: auto; margin-right: auto; }
+    .chapter-end-note { max-width: none; margin-left: 0; margin-right: 0; }
 
     .chapter-nav-bottom {
       border-top: 1px solid #a08264;
@@ -201,12 +203,92 @@
     .reader-notice a { color: #900b0b; }
     .is-hidden { display: none !important; }
 
-    @media (max-width: 600px) {
-      .story-page { width: calc(100% - 20px); margin-top: 15px; }
-      .story-metadata { grid-template-columns: 90px minmax(0, 1fr); column-gap: 9px; }
-      .chapter-body { font-size: 17px; }
-      .chapter-nav-top { align-items: stretch; }
-      .chapter-picker { width: 100%; flex-basis: 100%; }
+    /* Make the text actually use the reader width on every screen.
+       Long links, code, and large artwork should not force horizontal scrolling. */
+    .chapter-body pre {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    .chapter-body table {
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    .chapter-body iframe,
+    .chapter-body video { max-width: 100%; }
+
+    /* Phone layout: keep the writing, warnings and author notes,
+       remove bulky decoration and redundant navigation information. */
+    @media (max-width: 700px) {
+      .story-page {
+        width: calc(100% - 16px);
+        margin: 10px auto 35px;
+      }
+      .story-return {
+        margin: 0 0 6px;
+        padding: 5px 4px;
+      }
+      .story-card {
+        padding: 12px;
+        margin-bottom: 12px;
+        border-radius: 3px;
+        box-shadow: none;
+      }
+      .story-title { font-size: clamp(26px, 7vw, 34px); }
+      .story-subtitle { margin-bottom: 4px; }
+      .story-metadata {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 3px;
+        margin-top: 12px;
+      }
+      .story-metadata dt:not(:first-child) { margin-top: 8px; }
+      .story-summary { line-height: 1.4; }
+      .story-note { padding: 10px 12px; margin: 12px 0; }
+      .chapter-nav-top {
+        padding: 8px 10px;
+        margin-bottom: 8px;
+        border-radius: 3px;
+        gap: 6px;
+      }
+      .chapter-picker-label { font-size: 14px; }
+      .chapter-picker {
+        width: 100%;
+        flex: 1 1 100%;
+        min-height: 44px;
+      }
+      #chapter-count-top { display: none; }
+      .chapter-eyebrow { display: none; }
+      .chapter-heading {
+        font-size: clamp(23px, 6vw, 29px);
+        margin: 2px 0 12px;
+        padding-bottom: 6px;
+      }
+      .chapter-body {
+        font-size: 16px;
+        line-height: 1.2;
+        margin-bottom: 18px;
+      }
+      .chapter-nav-bottom {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 8px;
+        padding-top: 12px;
+        margin-top: 16px;
+      }
+      #chapter-count-bottom {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        text-align: center;
+      }
+      #chapter-previous { grid-column: 1; grid-row: 2; }
+      #chapter-next { grid-column: 2; grid-row: 2; }
+      .chapter-button {
+        width: 100%;
+        min-width: 0;
+        min-height: 44px;
+        padding: 8px 5px;
+        font-size: 14px;
+      }
     }
   </style>
 </head>
