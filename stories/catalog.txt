@@ -1,0 +1,8 @@
+# LOGS & STORIES CATALOG
+# Each non-comment line is a story filename WITHOUT .txt.
+# The listing gets the title, rating, summary, author, and status from that story's own text file.
+# Upload the story in /stories/ first, then add its filename here.
+# Lines starting with # are ignored. Entries appear in the order you list them.
+
+example-story
+

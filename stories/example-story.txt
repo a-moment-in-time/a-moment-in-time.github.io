@@ -5,10 +5,10 @@ The Archivist's Test (Demo Story)
 A Moment in Time — Demonstration
 
 [SUMMARY]
-A short, entirely fictional test story to demonstrate the new reader. This is <b>not established group canon</b>.
+A short, entirely fictional test story to demonstrate the new reader. and to test story layouts.
 
 [RATING]
-Teen
+General Audiences
 
 [WARNINGS]
 Mild fantasy peril (test metadata only)
@@ -20,7 +20,7 @@ Fantasy, Humor
 Complete — Demo
 
 [SETTING]
-An imaginary archive (not a canonical Warcraft location)
+An imaginary archive
 
 [AO3]
 
@@ -49,7 +49,7 @@ A Page Out of Order
 [CHAPTER_2_NOTE]
 
 [CHAPTER_2]
-The second chapter appeared with hardly any effort. No one had to make a new webpage, and nobody was forced to count how many chapters the library might hold.
+The second chapter appeared with hardly any effort. No one had to make a new webpage, and nobody was forced to count how many chapters the library might hold. Best of all no added HTML or coding was needed. Just simple brackets that helped divide the chapter into another. 
 
 "Can I skip directly to the next chapter?" the visitor asked.
 

@@ -38,6 +38,43 @@
       margin-bottom: 22px;
     }
 
+    /* Story-level rating reminder: the same color mapping as stories.html. */
+    .story-header.story-card {
+      padding: 0;
+      overflow: hidden;
+    }
+    .story-title-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      padding: 16px clamp(18px, 4vw, 38px);
+      background: #55545A;
+      color: #fff5e8;
+    }
+    .story-title-bar.rating-general  { background: #315B43; }
+    .story-title-bar.rating-teen     { background: #78601F; }
+    .story-title-bar.rating-mature   { background: #944B24; }
+    .story-title-bar.rating-explicit { background: #7F252B; }
+    .story-title-bar.rating-unrated  { background: #55545A; }
+    .story-title-bar .story-title {
+      flex: 1 1 340px;
+      min-width: 0;
+      margin: 0;
+      color: #fff5e8;
+      overflow-wrap: anywhere;
+    }
+    .story-rating-label {
+      color: #fff5e8;
+      font: italic 700 16px 'Alegreya', Georgia, serif;
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+    .story-header-content {
+      padding: clamp(18px, 4vw, 38px);
+    }
+
     .story-title {
       font-family: 'Alegreya SC', Georgia, serif;
       font-size: clamp(29px, 4.2vw, 43px);
@@ -263,6 +300,11 @@
         border-radius: 3px;
         box-shadow: none;
       }
+      .story-header.story-card { padding: 0; }
+      .story-title-bar { padding: 12px; gap: 4px 12px; }
+      .story-title-bar .story-title { flex-basis: 100%; }
+      .story-rating-label { font-size: 15px; }
+      .story-header-content { padding: 12px; }
       .story-title { font-size: clamp(26px, 7vw, 34px); }
       .story-subtitle { margin-bottom: 4px; }
       .story-metadata {
@@ -328,14 +370,19 @@
   <main class="story-page">
     <a class="story-return" href="../index.html">← Return to World Codex</a>
 
-    <section id="story-header" class="story-card is-hidden" aria-label="Story information">
-      <h1 id="story-title" class="story-title"></h1>
-      <p id="story-authors" class="story-subtitle is-hidden"></p>
-      <dl id="story-metadata" class="story-metadata"></dl>
-      <details id="story-note" class="story-note story-note-collapsible is-hidden">
-        <summary class="story-note-toggle">Story Note</summary>
-        <div id="story-note-text" class="story-note-text story-note-expanded"></div>
-      </details>
+    <section id="story-header" class="story-card story-header is-hidden" aria-label="Story information">
+      <div id="story-title-bar" class="story-title-bar rating-unrated">
+        <h1 id="story-title" class="story-title"></h1>
+        <span id="story-rating-label" class="story-rating-label"></span>
+      </div>
+      <div class="story-header-content">
+        <p id="story-authors" class="story-subtitle is-hidden"></p>
+        <dl id="story-metadata" class="story-metadata"></dl>
+        <details id="story-note" class="story-note story-note-collapsible is-hidden">
+          <summary class="story-note-toggle">Story Note / Summary</summary>
+          <div id="story-note-text" class="story-note-text story-note-expanded"></div>
+        </details>
+      </div>
     </section>
 
     <div id="reader-notice" class="story-card reader-notice" role="status">
@@ -458,10 +505,25 @@
       else content.replaceChildren();
     }
 
+    function ratingClass(rawRating) {
+      // Matches the directory's rating groups; unknown/blank values stay neutral.
+      const value = String(rawRating || '').trim().toLowerCase().replace(/\s+/g, ' ');
+      if (['general audiences', 'general', 'g', 'everyone'].includes(value)) return 'rating-general';
+      if (['teen', 'teen and up audiences', 'teen and up', 't'].includes(value)) return 'rating-teen';
+      if (['mature', 'm'].includes(value)) return 'rating-mature';
+      if (['explicit', 'e'].includes(value)) return 'rating-explicit';
+      return 'rating-unrated';
+    }
+
     function renderStoryHeader(sections) {
       const title = sections.get('title').trim();
       document.getElementById('story-title').textContent = title;
       document.title = `${title} — A Moment in Time`;
+      const rating = sections.get('rating');
+      document.getElementById('story-title-bar').className = `story-title-bar ${ratingClass(rating)}`;
+      document.getElementById('story-rating-label').textContent = hasContent(rating)
+        ? `Rating: ${rating.trim()}`
+        : 'Rating: Not Rated / Pending';
       const author = sections.get('author');
       const authorElement = document.getElementById('story-authors');
       authorElement.classList.toggle('is-hidden', !hasContent(author));
