@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Logs &amp; Stories — A Moment in Time</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* =============================================================
+       LOGS & STORIES DIRECTORY
+       Uses the existing World Codex palette and character-list cards.
+       All styles are local to this page; style.css stays unchanged.
+       ============================================================= */
+    .stories-directory {
+      max-width: 1500px;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    .stories-directory .content-flow { min-width: 0; gap: 20px; }
+    .stories-directory .sidebar { min-width: 0; }
+    .stories-directory .intro-box h1 { font-size: clamp(30px, 4vw, 42px); }
+    .stories-directory .intro-box p { line-height: 1.5; margin: 10px 0 0; }
+    .directory-mobile-return { display: none; }
+    .directory-mobile-return a { color: #900b0b; font-weight: bold; text-decoration: none; }
+
+    /* Always ONE story per row, unlike the tiled character group cards. */
+    .story-entry-list {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+      min-width: 0;
+    }
+    .story-entry {
+      border: 1px solid #c7a987;
+      border-radius: 5px;
+      overflow: hidden;
+      background: rgba(61, 37, 27, 0.09);
+      box-shadow: inset 0 2px 4px rgba(61, 37, 27, 0.08), 0 4px 10px rgba(0,0,0,0.07);
+      min-width: 0;
+    }
+    .story-entry-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 5px 16px;
+      background: #900b0b;
+      color: #fff5e8;
+      padding: 10px 18px;
+    }
+    /* The header color follows [RATING]. Unrated/unknown stays neutral. */
+    .story-entry-top.rating-general  { background: #315B43; }
+    .story-entry-top.rating-teen     { background: #78601F; }
+    .story-entry-top.rating-mature   { background: #944B24; }
+    .story-entry-top.rating-explicit { background: #7F252B; }
+    .story-entry-top.rating-unrated  { background: #55545A; }
+
+    .story-entry-title {
+      margin: 0;
+      padding: 0;
+      border: none;
+      color: #fff5e8;
+      font: 700 clamp(21px, 2.4vw, 26px) / 1.2 'Alegreya', Georgia, serif;
+      text-transform: none;
+      min-width: 0;
+    }
+    .story-entry-title a { color: inherit; text-decoration: none; }
+    .story-entry-title a:hover,
+    .story-entry-title a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
+    .story-entry-rating {
+      font: italic 700 15px 'Alegreya', Georgia, serif;
+      color: #ffe4cf;
+      overflow-wrap: anywhere;
+    }
+    .story-entry-content { padding: 13px 18px 14px; min-width: 0; }
+    .story-entry-author {
+      margin: 0 0 9px;
+      color: #6b5142;
+      font-size: 13px;
+      font-style: italic;
+      overflow-wrap: anywhere;
+    }
+    .story-entry-summary {
+      font: 16px / 1.45 'Source Sans Pro', sans-serif;
+      margin: 0 0 12px;
+      color: #503b30;
+      overflow-wrap: anywhere;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      overflow: hidden;
+    }
+    .story-entry-bottom {
+      border-top: 1px solid rgba(80,59,49,0.20);
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+    .story-entry-status { font-size: 14px; color: #6b5142; }
+    .story-entry-status strong { color: #900b0b; }
+    .story-entry-read {
+      color: #900b0b;
+      font: 700 16px 'Alegreya SC', Georgia, serif;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .story-entry-read:hover,
+    .story-entry-read:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
+    .story-entry a:focus-visible,
+    .directory-mobile-return a:focus-visible { outline: 2px solid #900b0b; outline-offset: 3px; }
+    .directory-message { color: #503b30; padding: 12px 0; font-size: 16px; }
+
+
+    /* Introduction and rating legend: side by side on wider screens. */
+    .directory-top-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      align-items: start;
+      gap: 20px;
+      min-width: 0;
+    }
+    .directory-top-row > * { min-width: 0; }
+
+    /* Always-visible rating guide with fully colored legend rows. */
+    .rating-guide {
+      border: 1px solid #c7a987;
+      border-radius: 5px;
+      background: rgba(61, 37, 27, 0.07);
+      color: #503b30;
+      box-sizing: border-box;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+      padding: 14px;
+    }
+    .rating-guide-title {
+      color: #900b0b;
+      font: 700 21px 'Alegreya SC', Georgia, serif;
+      text-transform: none;
+      margin: 0 0 8px;
+      padding: 0 0 6px;
+      border-bottom: 1px solid #a08264;
+    }
+    .rating-guide-intro,
+    .rating-guide-footnote {
+      font-size: 13px;
+      line-height: 1.35;
+      margin: 8px 0;
+    }
+    .rating-guide-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+    .rating-guide-list li {
+      display: grid;
+      grid-template-columns: minmax(0, 130px) minmax(0, 1fr);
+      gap: 8px;
+      align-items: baseline;
+      min-width: 0;
+      padding: 8px 10px;
+      border-radius: 4px;
+      color: #fff5e8;
+      overflow-wrap: anywhere;
+      font-size: 13px;
+      line-height: 1.25;
+    }
+    .rating-guide-list li strong {
+      color: inherit;
+      font-size: 13px;
+    }
+    .rating-guide-list li span { color: inherit; }
+    .rating-guide-list li.rating-general  { background: #315B43; }
+    .rating-guide-list li.rating-teen     { background: #78601F; }
+    .rating-guide-list li.rating-mature   { background: #944B24; }
+    .rating-guide-list li.rating-explicit { background: #7F252B; }
+    .rating-guide-list li.rating-unrated  { background: #55545A; }
+
+    @media (max-width: 1200px) {
+      .directory-top-row { grid-template-columns: minmax(0, 1fr); }
+      .rating-guide-list li { grid-template-columns: minmax(0, 165px) minmax(0, 1fr); }
+    }
+    @media (max-width: 850px) {
+      /* The desktop Codex sidebar is redundant on narrow screens. */
+      .stories-directory.main-layout {
+        display: block;
+        width: 100%;
+        padding: 0 12px;
+      }
+      .stories-directory > .sidebar { display: none; }
+      .directory-mobile-return { display: block; margin: 10px 0 13px; }
+      .stories-directory .section-box { padding: 18px; }
+      .stories-banner { height: 150px; }
+    }
+    @media (max-width: 520px) {
+      .stories-directory.main-layout { padding: 0 9px; }
+      .stories-directory .section-box { padding: 13px; }
+      .stories-directory .content-flow { gap: 12px; }
+      .stories-banner { height: 95px; }
+      .story-entry-top { align-items: flex-start; padding: 10px 13px; }
+      .story-entry-rating { font-size: 14px; }
+      .story-entry-content { padding: 12px 13px; }
+      .story-entry-title { font-size: 22px; }
+      .story-entry-summary { font-size: 16px; }
+      .rating-guide { padding: 12px; }
+      .rating-guide-list li {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 3px;
+        padding: 8px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="images/world.jpg" class="full-width-banner banner-world stories-banner" alt="" aria-hidden="true">
+  <br>
+
+<br>
+  <div class="main-layout stories-directory" style="margin-top: 24px;">
+    <aside class="sidebar" aria-label="Directory navigation">
+      <h2>Information Codex</h2>
+      <div class="menu-group">Our Ventures</div>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#story-list">Logs &amp; Stories</a></li>
+      </ul>
+      <div class="menu-group">World Codex</div>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="index.html">← Return to World Codex</a></li>
+      </ul>
+    </aside>
+
+    <main class="content-flow" id="top">
+      <div class="directory-mobile-return"><a href="index.html">← Return to World Codex</a></div>
+      <div class="directory-top-row">
+        <section class="section-box intro-box">
+          <h1>Logs &amp; Stories</h1>
+          <p>Welcome to the main archive hosting all our written ventures. Here we will be gradually releasing our D&D sessions as they are converted into more story driven format based on our logs and session notes. For more insite on how that processes is undertaken, you can view how we plan everything. </p>
+		  <p>This may be bare as we are still migrating over from World Anvil, and still testing designs that work best. We may also offer mirrors to our stories over on Ao3 and Ellipsus, but we haven't settled on anything on that yet.</p>
+		  	  <p>Last please keep in mind, we do follow closely with the Warcraft Lore. We do not turn all our characters into 'real-life humans with different skin tones' It's stupid we must declare this, yes, but some people seem to insist things are more to real life then accepting how things may work in a fictional setting.  </p>
+        </section>
+
+        <!-- All ratings stay visible, each as its own color-coded row. -->
+        <aside class="rating-guide" aria-labelledby="rating-guide-title">
+          <h2 class="rating-guide-title" id="rating-guide-title">Rating Color Guide</h2>
+          <p class="rating-guide-intro">Story header colors indicate the audience rating at a glance:</p>
+          <ul class="rating-guide-list">
+            <li class="rating-general"><strong>General Audiences</strong><span>Suitable for a broad audience.</span></li>
+            <li class="rating-teen"><strong>Teen</strong><span>Stronger emotions, peril, or mild mature themes.</span></li>
+            <li class="rating-mature"><strong>Mature</strong><span>Adult themes or more intense material / serious violence.</span></li>
+            <li class="rating-explicit"><strong>Explicit</strong><span>May include graphic violence or explicit sexual material.</span></li>
+            <li class="rating-unrated"><strong>Not Rated / Pending</strong><span>No rating yet, or the story's direction is still undecided.</span></li>
+          </ul>
+          <p class="rating-guide-footnote"><strong>Note:</strong> Color is a guide, not a content warning. Please be sure to check each story's description and warnings before reading.</p>
+        </aside>
+      </div>
+
+<br><br>
+      <section aria-label="Story listings" id="story-list">
+        <div class="story-entry-list" id="entries">
+          <p class="directory-message" role="status">Opening the story catalog…</p>
+        </div>
+        <p class="directory-message" id="directory-status" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    /* Add one filename per line to stories/catalog.txt.
+       The title/rating/summary/status come directly from that .txt file. */
+    const CATALOG_PATH = 'stories/catalog.txt';
+    const STORY_FOLDER = 'stories/';
+    const SLUG_PATTERN = /^[a-z0-9_-]+$/;
+
+    function hasContent(value) {
+      const text = String(value || '').trim();
+      return text !== '' && !/^(none|n\/a)$/i.test(text);
+    }
+
+    function parseStoryFields(source) {
+      // Same bracket syntax as the story reader. We only need the header.
+      const beforeChapters = source.split(/\[CHAPTER_\d+(?:_TITLE|_NOTE|_END_NOTE)?\]/)[0];
+      const chunks = beforeChapters.split(/\[([A-Z0-9_]+)\]/);
+      const fields = new Map();
+      for (let i = 1; i < chunks.length; i += 2) {
+        fields.set(chunks[i].toLowerCase(), (chunks[i + 1] || '').trim());
+      }
+      return fields;
+    }
+
+    function plainText(value) {
+      // Descriptions may use the reader's simple HTML (<b>, <i>, etc.).
+      // Render only their text on this directory, not HTML elements.
+      const template = document.createElement('template');
+      template.innerHTML = String(value || '');
+      return (template.content.textContent || '').replace(/\s+/g, ' ').trim();
+    }
+
+    function makeElement(tag, className, content) {
+      const element = document.createElement(tag);
+      if (className) element.className = className;
+      if (content !== undefined) element.textContent = content;
+      return element;
+    }
+
+    function ratingClass(rawRating) {
+      // Canonical reader ratings; normalize common short forms and variants.
+      const value = String(rawRating || '').trim().toLowerCase().replace(/\s+/g, ' ');
+      if (['general audiences', 'general', 'g', 'everyone'].includes(value)) return 'rating-general';
+      if (['teen', 'teen and up audiences', 'teen and up', 't'].includes(value)) return 'rating-teen';
+      if (['mature', 'm'].includes(value)) return 'rating-mature';
+      if (['explicit', 'e'].includes(value)) return 'rating-explicit';
+      return 'rating-unrated';
+    }
+
+    function createStoryEntry(slug, fields) {
+      const title = plainText(fields.get('title'));
+      if (!title) return null;
+
+      const href = `${STORY_FOLDER}index.html?story=${encodeURIComponent(slug)}`;
+      const article = makeElement('article', 'story-entry');
+      const rating = plainText(fields.get('rating'));
+      const header = makeElement('div', `story-entry-top ${ratingClass(rating)}`);
+      const heading = makeElement('h2', 'story-entry-title');
+      const titleLink = makeElement('a', null, title);
+      titleLink.href = href;
+      heading.append(titleLink);
+      header.append(heading);
+
+      if (hasContent(rating)) header.append(makeElement('span', 'story-entry-rating', `Rating: ${rating}`));
+      article.append(header);
+
+      const content = makeElement('div', 'story-entry-content');
+      const author = plainText(fields.get('author'));
+      if (hasContent(author)) content.append(makeElement('p', 'story-entry-author', `By ${author}`));
+      const summary = plainText(fields.get('summary'));
+      if (hasContent(summary)) content.append(makeElement('p', 'story-entry-summary', summary));
+
+      const bottom = makeElement('div', 'story-entry-bottom');
+      const status = plainText(fields.get('status'));
+      if (hasContent(status)) {
+        const statusLine = makeElement('span', 'story-entry-status');
+        const label = makeElement('strong', null, 'Status: ');
+        statusLine.append(label, document.createTextNode(status));
+        bottom.append(statusLine);
+      }
+      const read = makeElement('a', 'story-entry-read', 'Read Story →');
+      read.href = href;
+      bottom.append(read);
+      content.append(bottom);
+      article.append(content);
+      return article;
+    }
+
+    async function loadStory(slug) {
+      const response = await fetch(`${STORY_FOLDER}${encodeURIComponent(slug)}.txt`);
+      if (!response.ok) throw new Error(`${slug}: HTTP ${response.status}`);
+      const fields = parseStoryFields(await response.text());
+      const entry = createStoryEntry(slug, fields);
+      if (!entry) throw new Error(`${slug}: missing [TITLE]`);
+      return entry;
+    }
+
+    async function loadCatalog() {
+      const entries = document.getElementById('entries');
+      const status = document.getElementById('directory-status');
+      try {
+        const response = await fetch(CATALOG_PATH);
+        if (!response.ok) throw new Error(`Catalog: HTTP ${response.status}`);
+        const slugs = [...new Set((await response.text()).split(/\r?\n/)
+          .map(line => line.trim())
+          .filter(line => line && !line.startsWith('#'))
+          .filter(line => SLUG_PATTERN.test(line)))];
+        if (!slugs.length) {
+          entries.replaceChildren(makeElement('p', 'directory-message', 'No stories are listed yet.'));
+          status.textContent = '';
+          return;
+        }
+        const results = await Promise.allSettled(slugs.map(loadStory));
+        const fragment = document.createDocumentFragment();
+        let count = 0, failed = 0;
+        for (const result of results) {
+          if (result.status === 'fulfilled') {
+            fragment.append(result.value);
+            count++;
+          } else {
+            failed++;
+            console.warn('Could not list story:', result.reason);
+          }
+        }
+        entries.replaceChildren(fragment);
+        if (!count) entries.append(makeElement('p', 'directory-message', 'No story files could be loaded.'));
+        status.textContent = failed ? `${failed} catalog ${failed === 1 ? 'entry' : 'entries'} could not be loaded. Check the filename and the browser console.` : '';
+      } catch (error) {
+        console.warn('Unable to open story catalog:', error);
+        entries.replaceChildren(makeElement('p', 'directory-message', 'The story directory is not available yet. Please check stories/catalog.txt.'));
+        status.textContent = '';
+      }
+    }
+    loadCatalog();
+  </script>
+</body>
+</html>
