@@ -78,13 +78,7 @@ Night Elf
 
 [BUILD] Slim and Fit
 
-[SCALE_COLOR]
-
-[EYE] Silver
-
-[HAIR] Silvery Blue
-
-[SKIN_TONE]
+[PALETTE]
 
 [FACTION] Neutral 
 

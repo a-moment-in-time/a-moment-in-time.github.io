@@ -75,15 +75,7 @@ portrait/default.png
 
 [BUILD] Slim
 
-[SCALE_COLOR] Cobalt
-
-[EYE] Silver
-
-[HAIR] Phthalo Blue fading to a Dark Violet at the tips.
-
-[SKIN_TONE]
-
-[FACTION] Alliance
+[PALETTE]
 
 [OCCUPATION] Mage and Transportation
 

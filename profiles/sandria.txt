@@ -30,8 +30,8 @@ Sandriastrasza / Sandriadormi
 
 [GENDER]
 Female
-[AGE] "28" (as of <a href="https://warcraft.wiki.gg/wiki/Timeline#Battle_for_Azeroth" target="new">BFA</a>, year 34) 
-"34" (as of <a href="https://warcraft.wiki.gg/wiki/Timeline#Dragonflight" target="new">Dragonflight</a>, Year 40)
+[AGE] "28" (as of <a href="https://warcraft.wiki.gg/wiki/Timeline#Battle_for_Azeroth" target="_blank" rel="noopener noreferrer"   class="lore-tooltip" data-tooltip="Warcraft Wiki: Timeline - Year 33 - Battle for Azeroth">BFA</a>, year 34) 
+"34" (as of <a href="https://warcraft.wiki.gg/wiki/Timeline#Dragonflight"  target="_blank" rel="noopener noreferrer"   class="lore-tooltip" data-tooltip="Warcraft Wiki: Timeline - Year 40 &#10; Dragonflight">Dragonflight</a>, Year 40)
 True age Unknown- Answers 28 if asked.
 [BIRTHPLACE] “End Time” Crystal Song - Northrend
 
@@ -49,13 +49,15 @@ True age Unknown- Answers 28 if asked.
 
 [BUILD] Athletic Sleek
 
-[SCALE_COLOR] Bronze with Red tint
+[PALETTE]
+Skin Tone | #F7CC9E | Mortal Form
+Hair Color | #C48C00 | Mortal Form
+Eye Color | #C8971B | Mortal Form
+Pendant Hue | #841DD3 | Magic/Aura color (True Drake Form Eye Color)
+Main Scale Color | #FFC54A | True Drake Form
+Accent Scale Color | #C94326 | True Drake Form
 
-[EYE] Amber (Human Form), Violet (Drake)
 
-[HAIR] Light Strawberry Blond
-
-[SKIN_TONE]
 
 [FACTION] Neutral - Alliance Leaning
 
@@ -345,11 +347,12 @@ During times of great stress or high anxiety her bronze side can come out subcon
 She also as with most dragons has the natural ability to breath fire in both human and dragon forms, and is mostly used to help heat the forge she works at as a blacksmith. This is an ability the amulet can’t suppress as it’s more biology than it is magic. 
 	  
 <h3>Trade Skills</h3>
-<h4>Healing</h4>Maetel can heal using her innate life magic she inherited from her Red Dragon side. Though she has also learned to wield the Light thanks to her Paladin training and can also use it to help mend.
-<h4>Smithing</h4>One of the first skills she learned while she hid as a mortal. Her adopted father Callahan worked as a blacksmith, mainly repairing gear and tools and she would learn through mimicking his actions and from some accidental mind delves.  
+<h4>Smithing</h4>One of the first skills she learned while she hid as a mortal. Her adopted father Callahan worked as a blacksmith, mainly repairing gear and tools and she would learn through mimicking his actions and from some accidental time trickery as her bronze side would slip out letting her view fragment events of someones past.  
+<h4>Healing</h4>Maetel can heal using her innate life magic she inherited from her Red Dragon side. Though she has also learned to wield the Holy Light thanks to her Paladin training to use to help mend and heal when needed.
 <h4>Farming</h4>When not helping at the forges she is often working the fields to help try and grow crops in the near lifeless soils. She does on occasion use her life magic from her red dragon side to coax the plants to grow, and at rarer times her time magic from her bronze side to speed things along. All while being careful to not expose these abilities to those around her.     
 		
-<h3>Hobbies</h3>She loves to sing, having memories while still in her egg of someone; assuming her mother; singing to her before the clutch was taken away. 
+<h3>Hobbies</h3>She loves to sing, having memories while still in her egg of someone; assuming her mother; singing to her before the clutch baring her and her siblings was taken away to be smuggled out of the Infinites hold. 
+She is also a fine wood carver, rather designs for simple decoration or to be used as tools.
 
 [RELATIONS]
 <h2>Family</h2>
@@ -363,11 +366,11 @@ She also as with most dragons has the natural ability to breath fire in both hum
 
 <h2>Associations</h2>
 
-<h3>Kalecgos & Chronormu (Chromie)</h3>Chromie was among the first dragons Sandria encountered after escaping the Infinite-controlled timeway. Although Sandria initially regarded her with suspicion, Chromie's patience and willingness to listen helped persuade her that the two siblings were not simply exchanging one danger for another. After hearing their story and examining fragments of their escape, Chromie agreed to protect their identities, including Ebbyion's existence as an uncorrupted Black dragon. Sandria has come to regard her as a rare confidante and a bridge to the Bronze Dragonflight, even if she still wonders how much the little dragon might know of a past Sandria has never disclosed. Chromie later advocated for the siblings when their place in the timeline came under question, and Nozdormu chose not to send them back into a timeway still under the Infinite Dragonflight's control. For Sandria, that decision quietly challenged a painful expectation shaped by a life only she remembers, and marked an important step toward trusting the Bronze Dragonflight.
+<h3>Chronormu (Chromie)</h3>Chromie was among the first dragons Sandria encountered after escaping the Infinite-controlled timeway. Although Sandria initially regarded her with suspicion, Chromie's patience and willingness to listen helped persuade her that the two siblings were not simply exchanging one danger for another. After hearing their story and examining fragments of their escape, Chromie agreed to protect their identities, including Ebbyion's existence as an uncorrupted Black dragon. Sandria has come to regard her as a rare confidante and a bridge to the Bronze Dragonflight, even if she still wonders how much the little dragon might know of a past Sandria has never disclosed. Chromie later advocated for the siblings when their place in the timeline came under question, and Nozdormu chose not to send them back into a timeway still under the Infinite Dragonflight's control. For Sandria, that decision quietly challenged a painful expectation shaped by a life only she remembers, and marked an important step toward trusting the Bronze Dragonflight.
 
-Kalecgos approached the siblings with a more cautious sort of kindness. As one of those responsible for the Nexus, he had every reason to question the arrival of two unknown travelers bearing unfamiliar magic. Nevertheless, he offered them refuge and arranged for Tobi to help them understand the world into which they had arrived. Sandria was initially uneasy with his decision to have Tobi report on their activities, but Kalecgos's continued willingness to help, and his eventual decision to end that obligation, allowed her to see him as an ally rather than another authority seeking control over her future. Both dragons have helped her learn that caution need not always mean rejection, and that trust can be earned rather than demanded.
+<h3>Kalecgos </h3>Kalecgos approached the siblings with a more cautious sort of kindness. As one of those responsible for the Nexus, he had every reason to question the arrival of two unknown travelers bearing unfamiliar magic from another timeline. Nevertheless, he offered them refuge and arranged for Tobi to help them understand the world into which they had arrived. Sandria was initially uneasy with his decision to have Tobi report on their activities, but Kalecgos's continued willingness to help, and his eventual decision to end that obligation, allowed her to see him as an ally rather than another authority seeking control over her future. Both dragons have helped her learn that caution need not always mean rejection, and that trust can be earned rather than demanded.
 
-<h3>Tobi</h3>Tobi is a young Blue drake and a capable mage whom Kalecgos assigned to accompany Sandria and Ebbyion after their arrival at the Nexus. His knowledge of the world, its history, and the use of portals made him an invaluable guide to two travelers whose own experiences could no longer be relied upon to tell them what to expect. At first, Sandria was wary of having someone appointed to observe them, especially knowing that Tobi was expected to report back to Kalecgos.
+<h3>Tobi</h3>Tobi is a young Blue drake and a capable mage whom Kalecgos assigned to accompany Sandria and Ebbyion after their arrival at the Nexus after their escape. His knowledge of the world, its history, and the use of portals made him an invaluable guide to two travelers whose own experiences could no longer be relied upon to tell them what to expect. At first, Sandria was wary of having someone appointed to observe them, especially knowing that Tobi was expected to report back to Kalecgos.
 
 Their relationship changed gradually as he proved himself a dependable companion rather than merely an escort. Tobi came to understand how much the siblings valued their privacy and began withholding details that he did not believe Kalecgos needed to know. In time, Kalecgos relieved him of his reporting duty, asking only that he continue looking out for their safety. For Sandria, whose first instinct is to shoulder every responsibility herself, Tobi's friendship has become particularly important. He is one of the few people she trusts to stay with Ebbyion when she cannot, and someone she has learned to count upon for more than his skill with magic.
 

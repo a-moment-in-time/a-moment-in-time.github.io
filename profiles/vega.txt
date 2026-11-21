@@ -75,13 +75,7 @@ Vega Swiftblade
 
 [BUILD] Heavily muscular and exceptionally agile
 
-[SCALE_COLOR]
-
-[EYE] 
-
-[HAIR] 
-
-[SKIN_TONE]
+[PALETTE]
 
 [FACTION] Alliance
 

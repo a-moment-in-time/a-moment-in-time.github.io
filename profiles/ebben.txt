@@ -47,13 +47,15 @@ Male
 
 [BUILD] Slim
 
-[SCALE_COLOR]
 
-[EYE] Amber (Human Form), Red (Drake)
+[PALETTE]
+Skin Tone - Dark Chestnut | #916A5F | Mortal Form
+Hair Color | #3C3839 | Mortal Form
+Eye Color | #D13F1D | Mortal Form
+Pendant Hue | #ff0000 | Magic/Aura color (True Form Eye Color)
 
-[HAIR] Ashy Black
 
-[SKIN_TONE]
+
 
 [FACTION] Neutral - Alliance Leaning
 
