@@ -76,6 +76,12 @@ portrait/default.png
 [BUILD] Slim
 
 [PALETTE]
+Skin Tone | #C4D6E4 | Mortal Form
+Arms/Feet/Ear Tone | #726DA8 | Mortal Form
+Hair Color | #222FB7 | Mortal Form
+Hair Ends hue | #280F7A | Mortal Form
+Skin Tone | #F7CC9E | Mortal Form
+Eye Color | #D4CFE8 | Both Forms
 
 [OCCUPATION] Mage and Transportation
 
