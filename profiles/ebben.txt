@@ -33,7 +33,7 @@ Male
 [BIRTHPLACE] Egg laid in Unknown Timeway
  'Hatched' in "End Time" Northrend
 
-[SEXUALITY]  Bisexual
+[SEXUALITY] Bisexual
 
 [STATUS] Alive
 
@@ -82,7 +82,9 @@ Independent
 
 
 [INFORMATION]
-Basic Information Here
+Ebbyion, or simply Ebben as he most commonly goes by is a young adult drake, yet one who has seemingly turned away from everything that represents his true nature. 
+
+Bio still WIP
 
 
 
@@ -148,47 +150,48 @@ The Infinite found them just before the portal was opened. Saulstrasz gave his l
 <h3>Habits</h3>
 
 [ABILITIES]
-<h2>Education/Training</h2>
+<h3>Education/Training</h3>
 	  
-<h2>Abilities</h2>
+<h3>Abilities</h3>
 
-<h2>Trade Skills</h2>
+<h3>Trade Skills</h3>
 		
-<h2>Hobbies</h2>
-
-
-[RELATIONS]
-<h2>Family</h2>
-
-<h3>Associations</h3>
-
-[NOTES]
-<b>KEY DETAIL: </b> He wears a gemmed amulet that holds a powerful enchantment that suppresses his Dragon side, binding him to a Mortal Form and giving him the full aura of a Mortal, masking his true nature from all even from other Dragons.
-
-Ebben is an AU Wrathion, always has been. He started as a thought from another friend Jordan, with the idea of "What if the Infinite had captured him from the timeline?" that ended up evolving into "What if the Infinite stole his egg from another timeline with the plans to twist that version of him into another Deathwing to use as a weapon against the time-ways?"
-
-Ebbyion is an AU (Alternate Universe) Wrathion. This fact however is largely unknown by all but perhaps himself, though he hasn't given any signs of being aware.
-
-The only hint of him being an AU Wrathion would be his voice as it is identical.
-
-Ebbyion is OLDER than Wrathion, due to the years he lived in 'End Time', plus arriving to Azeroth's past during events of Wrath of the Lich King, nearly TWO YEARS before Wrathion's egg would be laid.
-
-Due to Ebbyion's upbringing and what happened to him he has a lot of mental scaring and is very shy, timid and withdrawn. His (adopted) sister <a href="?char=sandria" onclick="switchProfile(event, 'sandria')">Sandria's</a> over-protectiveness of him hadn't helped in that regard. It takes some work for him to open up and be more himself. He does have his 'Wrathion' moments, however.
-
-Although dragons have full control over their Mortal Forms; changing the appearance at will; Ebbyion hasn't really changed the appearance of his own Mortal Form much and continues to look almost the same as when he first gained it. This is mainly due to him not having any real need to change it.
-
-Ebben has taken on the mortal guise of an Orc as an alternative to his normal human form. This form is rarely used and only came into play when he and his sister needed to cross Horde territories. It's also a homage to an Orc Shaman he and his sister befriended early on who had figured out what the siblings really were.
-
-Outside when he first hatched, he has never taken on his true form.
-
-Ebbyion does have some mild body dysmorphia and doesn't like being 'exposed'. Not helped that the scars and marks on his body always manifest on his Mortal Form. A step in the right direction has been getting him relaxed in shorter sleeved tops, allowing at least his forearms to be visible.
-
-His left arm is somewhat disabled. He can't lift it above his head at the shoulder, and the elbow has a limited range of motion, between 45, and 130 degrees due to damage he suffered as a whelp that nearly ended with his arm torn off.
-A hint to when things are becoming too much for him is he'll reach around and grip tight his left arm, and may try to angle his body so his left side isn't as exposed.
+<h3>Hobbies</h3>
+<h3>Physical Limitations</h3>
+His left arm is somewhat disabled. He can't lift it above his head at the shoulder, and the elbow has a limited range of motion, between 45, and 130 degrees due to damage he suffered as a whelp that nearly ended with his arm torn off, resaulting in the long scar that travels near his shoulder down to his wrist.
 
 He suffers from chronic pain in his left shoulder (where the scar on his arm leads to) that he has dealt with all his life and has become so use to it that its 'normal'. This pain is due to his mangled and disjoined wing; an injury that was inflicted along with his torn arm; that never mended properly and manifests as a deformation on his shoulder, it is also why he cant lift the arm above his head.
 
-Ebben was meant to be twisted, both mind and body into another Deathwing, and such a process had started before he was rescued. He is fully aware of this and the ordeal has left its mental scars. The idea is terrifying to him and has made him fearful of HIMSELF and the power he holds and what he feels it will turn him into.
+[RELATIONS]
+<h2>Family</h2>
+<h3>Sandria</h3>
 
-Elements of his appearance is referenced from an artist I like who has an adorable style in how they draw Wrathion; mainly his hair style and eyes; before anyone knew what his new model would look like (artist poofed during legion). Like with long hair and ponytail.. I did plan for him to grow his hair out like that at some point as a throw back to his original design, back when every character I made came with long hair.
+<h3>Callahan Plesner</h3>
+
+<h3>Saulstrasz</h3>
+
+<h3>Caristrasza</h3>The first kind face and tender treatment Ebben had faced sense he was torn from his egg. She was a captive of the Infinite, a red dragon whom Ebben was tossed to to 'keep him alive' while the Infinite worked to break him. However she didn't see him as a burden or a task, just a pained young whelp in need, one whom despite risk's to herself, did everything she could to see him freed.
+
+<h3>Associations</h3>
+<h3>Tobi</h3>Tobi is a young Blue drake and a capable mage whom Kalecgos assigned to accompany Sandria and Ebbyion after their arrival at the Nexus after their escape. His knowledge of the world, its history, and the use of portals made him an invaluable guide to two travelers whose own experiences could no longer be relied upon to tell them what to expect. At first, Sandria was wary of having someone appointed to observe them, especially knowing that Tobi was expected to report back to Kalecgos.
+
+Their relationship changed gradually as he proved himself a dependable companion rather than merely an escort. Tobi came to understand how much the siblings valued their privacy and began withholding details that he did not believe Kalecgos needed to know. In time, Kalecgos relieved him of his reporting duty, asking only that he continue looking out for their safety. For Ebbyion, he has become someone trusted, and count upon for more than his skill with magic.
+
+
+[NOTES]
+<li><b>KEY DETAIL: </b> He wears a gemmed amulet that holds a powerful enchantment that suppresses his Dragon side, binding him to a Mortal Form and giving him the full aura of a Mortal, masking his true nature from all even from other Dragons.
+</li><li>Ebben is an AU Wrathion, always has been. He started as a thought from another friend Jordan, with the idea of "What if the Infinite had captured him from the timeline?" that ended up evolving into "What if the Infinite stole his egg from another timeline with the plans to twist that version of him into another Deathwing to use as a weapon against the time-ways?"
+</li><li>Ebbyion is an AU (Alternate Universe) Wrathion. This fact however is largely unknown by all but perhaps himself, though he hasn't given any signs of being aware.
+</li><li>The only hint of him being an AU Wrathion would be his voice as it is identical.
+</li><li>Ebbyion is OLDER than Wrathion, due to the years he lived in 'End Time', plus arriving to Azeroth's past during events of Wrath of the Lich King, nearly TWO YEARS before Wrathion's egg would be laid.
+</li><li>Due to Ebbyion's upbringing and what happened to him he has a lot of mental scaring and is very shy, timid and withdrawn. His (adopted) sister <a href="?char=sandria" onclick="switchProfile(event, 'sandria')">Sandria's</a> over-protectiveness of him hadn't helped in that regard. It takes some work for him to open up and be more himself. He does have his 'Wrathion' moments, however.
+</li><li>Although dragons have full control over their Mortal Forms; changing the appearance at will; Ebbyion hasn't really changed the appearance of his own Mortal Form much and continues to look almost the same as when he first gained it. This is mainly due to him not having any real need to change it.
+</li><li>Ebben has taken on the mortal guise of an Troll as an alternative to his normal human form. This form is rarely used and only came into play when he and his sister needed to cross Horde territories. It's also a homage to an Troll Shaman he and his sister befriended early on who had figured out what the siblings really were.
+</li><li>Outside when he first hatched, he has never taken on his true form.
+</li><li>Ebbyion does have some mild body dysmorphia and doesn't like being 'exposed'. Not helped that the scars and marks on his body always manifest on his Mortal Form. A step in the right direction has been getting him relaxed in shorter sleeved tops, allowing at least his forearms to be visible.
+</li><li>His left arm is somewhat disabled. He can't lift it above his head at the shoulder, and the elbow has a limited range of motion, between 45, and 130 degrees due to damage he suffered as a whelp that nearly ended with his arm torn off.
+A hint to when things are becoming too much for him is he'll reach around and grip tight his left arm, and may try to angle his body so his left side isn't as exposed.
+</li><li>He suffers from chronic pain in his left shoulder (where the scar on his arm leads to) that he has dealt with all his life and has become so use to it that its 'normal'. This pain is due to his mangled and disjoined wing; an injury that was inflicted along with his torn arm; that never mended properly and manifests as a deformation on his shoulder, it is also why he cant lift the arm above his head.
+</li><li>Ebben was meant to be twisted, both mind and body into another Deathwing, and such a process had started before he was rescued. He is fully aware of this and the ordeal has left its mental scars. The idea is terrifying to him and has made him fearful of HIMSELF and the power he holds and what he feels it will turn him into.
+</li><li>Elements of his appearance is referenced from an artist I like who has an adorable style in how they draw Wrathion; mainly his hair style and eyes; before anyone knew what his new model would look like (artist poofed during legion). Like with long hair and ponytail.. I did plan for him to grow his hair out like that at some point as a throw back to his original design, back when every character I made came with long hair.</li>
 
