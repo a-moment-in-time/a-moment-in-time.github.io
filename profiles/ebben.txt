@@ -164,7 +164,7 @@ He suffers from chronic pain in his left shoulder (where the scar on his arm lea
 
 [RELATIONS]
 <h2>Family</h2>
-<h3>Sandria</h3>
+<h3><a href="?char=sandria" onclick="switchProfile(event, 'sandria')">Sandria</a></h3>
 
 <h3>Callahan Plesner</h3>
 
@@ -172,16 +172,15 @@ He suffers from chronic pain in his left shoulder (where the scar on his arm lea
 
 <h3>Caristrasza</h3>The first kind face and tender treatment Ebben had faced sense he was torn from his egg. She was a captive of the Infinite, a red dragon whom Ebben was tossed to to 'keep him alive' while the Infinite worked to break him. However she didn't see him as a burden or a task, just a pained young whelp in need, one whom despite risk's to herself, did everything she could to see him freed.
 
-<h3>Associations</h3>
+<h2>Associations</h2>
 <h3>Tobi</h3>Tobi is a young Blue drake and a capable mage whom Kalecgos assigned to accompany Sandria and Ebbyion after their arrival at the Nexus after their escape. His knowledge of the world, its history, and the use of portals made him an invaluable guide to two travelers whose own experiences could no longer be relied upon to tell them what to expect. At first, Sandria was wary of having someone appointed to observe them, especially knowing that Tobi was expected to report back to Kalecgos.
 
 Their relationship changed gradually as he proved himself a dependable companion rather than merely an escort. Tobi came to understand how much the siblings valued their privacy and began withholding details that he did not believe Kalecgos needed to know. In time, Kalecgos relieved him of his reporting duty, asking only that he continue looking out for their safety. For Ebbyion, he has become someone trusted, and count upon for more than his skill with magic.
 
 
 [NOTES]
-<li><b>KEY DETAIL: </b> He wears a gemmed amulet that holds a powerful enchantment that suppresses his Dragon side, binding him to a Mortal Form and giving him the full aura of a Mortal, masking his true nature from all even from other Dragons.
-</li><li>Ebben is an AU Wrathion, always has been. He started as a thought from another friend Jordan, with the idea of "What if the Infinite had captured him from the timeline?" that ended up evolving into "What if the Infinite stole his egg from another timeline with the plans to twist that version of him into another Deathwing to use as a weapon against the time-ways?"
-</li><li>Ebbyion is an AU (Alternate Universe) Wrathion. This fact however is largely unknown by all but perhaps himself, though he hasn't given any signs of being aware.
+<li><div class="highlight"><b>KEY DETAIL: </b> He wears a gemmed amulet that holds a powerful enchantment that suppresses his Dragon side, binding him to a Mortal Form and giving him the full aura of a Mortal, masking his true nature from all even from other Dragons.</div>
+</li><li>Ebben is an AU Wrathion, always has been. He started as a thought from another friend Jordan, with the idea of "What if the Infinite had captured him from the timeline?" that ended up evolving into "What if the Infinite stole his egg from another timeline with the plans to twist that version of him into another Deathwing to use as a weapon against the time-ways?" This fact however is largely unknown by all but perhaps himself, though he hasn't given any signs of being aware.
 </li><li>The only hint of him being an AU Wrathion would be his voice as it is identical.
 </li><li>Ebbyion is OLDER than Wrathion, due to the years he lived in 'End Time', plus arriving to Azeroth's past during events of Wrath of the Lich King, nearly TWO YEARS before Wrathion's egg would be laid.
 </li><li>Due to Ebbyion's upbringing and what happened to him he has a lot of mental scaring and is very shy, timid and withdrawn. His (adopted) sister <a href="?char=sandria" onclick="switchProfile(event, 'sandria')">Sandria's</a> over-protectiveness of him hadn't helped in that regard. It takes some work for him to open up and be more himself. He does have his 'Wrathion' moments, however.

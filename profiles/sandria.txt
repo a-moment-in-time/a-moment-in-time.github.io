@@ -51,7 +51,7 @@ True age Unknown- Answers 28 if asked.
 
 [PALETTE]
 Skin Tone | #F7CC9E | Mortal Form
-Hair Color | #C48C00 | Mortal Form
+Hair Color | #945d00 | Mortal Form
 Eye Color | #C8971B | Mortal Form
 Pendant Hue | #841DD3 | Magic/Aura color (True Drake Form Eye Color)
 Main Scale Color | #FFC54A | True Drake Form
@@ -360,7 +360,7 @@ She is also a fine wood carver, rather designs for simple decoration or to be us
 
 <h3>Callahan Plesner</h3>Also called Call for short, is a mortal human paladin who was allied with Saulstrasz and had agreed to take up the charge of looking after Sandria, picked up the roll of father to her in her mortal guise. Saul remained her true father, and Callahan her mortal father.
 
-<h3>Ebbyion</h3>Some years later, Saulstrasz would arrive with something unexpected: another whelp. This one having been stolen from another timeline with plans to warp them into something dark, not even a month out of the shell and already having been brutalized in their start to break both mind and body. Sandria stepped in and took the whelp under her own care, adopting him as her brother and swearing to safeguard him from the dark fate that had been planned for him.
+<h3><a href="?char=ebben" onclick="switchProfile(event, 'ebben')">Ebbyion</a></h3> or just Ebben, is a black drake, one having been stolen from another timeline with plans to warp them into something dark by the Infinite Dragonflight. Not even a month out of the shell and already having been brutalized in their start to break both mind and body. He had been rescued from that fate and brought to Sandria who stepped in and took him in under her own care, adopting him as her brother and swearing to safeguard him from the dark fate that had been planned for him.
 
 <h3>Caristrasza</h3>The name of Sandria's mother, one whom she would never see though still held fading memories of her soft muffled singing from within the egg. She mourns for her dam, knowing she is trapped within the Infinites clutches, held prisoner to use in their experiments with her eggs, and to force her to use her life magic to heal.  
 
