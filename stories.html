@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Logs &amp; Stories — A Moment in Time</title>
+  <title>Azeroth: A Moment in Time - Logs &amp; Stories</title>
   <link rel="stylesheet" href="style.css">
   <style>
     /* =============================================================
        LOGS & STORIES DIRECTORY
-       Uses the existing World Codex palette and character-list cards.
-       All styles are local to this page; style.css stays unchanged.
+      Custom CSS for this page only
        ============================================================= */
     .stories-directory {
       max-width: 1500px;
@@ -23,7 +22,7 @@
     .directory-mobile-return { display: none; }
     .directory-mobile-return a { color: #900b0b; font-weight: bold; text-decoration: none; }
 
-    /* Always ONE story per row, unlike the tiled character group cards. */
+    /* One story per row*/
     .story-entry-list {
       display: grid;
       grid-template-columns: minmax(0, 1fr);
@@ -224,24 +223,57 @@
 <br>
   <div class="main-layout stories-directory" style="margin-top: 24px;">
     <aside class="sidebar" aria-label="Directory navigation">
-      <h2>Information Codex</h2>
-      <div class="menu-group">Our Ventures</div>
+  <h2>World Codex</h2>
+        
+        <div class="menu-group"><i class="bi bi-people-fill"></i> The Players</div>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="howwestarted.html"><i class="bi bi-book-half"></i> How we started</a></li>
+            <li class="nav-item"><a href="whoweare.html"><i class="bi bi-person-vcard-fill"></i> Who we are</a></li>
+        </ul>
+
+        <div class="menu-group"><i class="bi bi-globe-asia-australia"></i> Our World Concepts</div>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="lore.html"><i class="ra ra-scroll-unfurled"></i> The Lore we Follow</a></li>
+            <li class="nav-item"><a href="worldsetting.html"><i class="bi bi-hourglass-split"></i> Our World & Timeways</a></li>
+
+        </ul>
+
+        <div class="menu-group"><i class="ra ra-crossed-swords"></i> The Characters</div>
+        <ul class="nav-list">
+       
+            <li class="nav-item"> <a href="characters.html"><i class="bi bi-stickies-fill"></i> Character Groups & Bios </a></li>
+      
+        </ul>
+
+        <div class="menu-group"><i class="ra ra-campfire"></i> Our Ventures</div>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="planning.html"><i class="bi bi-pen-fill"></i> How we plan </a> </li>
+               <li class="nav-item"><a href="#story-list"><i class="bi bi-body-text"></i> Logs & Stories</a></li>
+        </ul>
+	  <div class="menu-group">World Codex</div>
       <ul class="nav-list">
-        <li class="nav-item"><a href="#story-list">Logs &amp; Stories</a></li>
+        <li class="nav-item"><a href="index.html"><i class="bi bi-caret-left-fill"></i> Return to World Codex</a></li>
       </ul>
-      <div class="menu-group">World Codex</div>
-      <ul class="nav-list">
-        <li class="nav-item"><a href="index.html">← Return to World Codex</a></li>
-      </ul>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
     </aside>
 
+
+
     <main class="content-flow" id="top">
-      <div class="directory-mobile-return"><a href="index.html">← Return to World Codex</a></div>
+      <div class="directory-mobile-return"><a href="index.html"><i class="bi bi-caret-left-fill"></i> Return to World Codex</a></div>
       <div class="directory-top-row">
         <section class="section-box intro-box">
           <h1>Logs &amp; Stories</h1>
-          <p>Welcome to the main archive hosting all our written ventures. Here we will be gradually releasing our D&D sessions as they are converted into more story driven format based on our logs and session notes. For more insite on how that processes is undertaken, you can view how we plan everything. </p>
-		  <p>This may be bare as we are still migrating over from World Anvil, and still testing designs that work best. We may also offer mirrors to our stories over on Ao3 and Ellipsus, but we haven't settled on anything on that yet.</p>
+          <p>Welcome to the main archive hosting all our written ventures. Here we will be gradually releasing our D&D sessions as they are converted into more story driven format based on our logs and session notes. For more incite on how that processes is undertaken, you can view how we plan everything. </p>
+		  <p><b>This is WIP as we are still migrating over from World Anvil, and testing website designs that work best, including a system to publish our stories easily from text files and have it render properly as with the demo below. We may also offer mirrors to our stories over on Ao3 and Ellipsus, but we haven't settled on anything on that yet.</b></p>
 		  	  <p>Last please keep in mind, we do follow closely with the Warcraft Lore. We do not turn all our characters into 'real-life humans with different skin tones' It's stupid we must declare this, yes, but some people seem to insist things are more to real life then accepting how things may work in a fictional setting.  </p>
         </section>
 
